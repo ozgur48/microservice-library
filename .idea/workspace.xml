@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/configurations/gateway-server/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/turkcell/gateway_server/config/GatewayConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/gateway-server/gateway-server-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/gateway-server/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/gateway-server/gateway-server-prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/gateway-server/gateway-server.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/gateway-server/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/gateway-server/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/gateway-server/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/gateway-server/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +190,7 @@
       <workItem from="1761993596520" duration="5941000" />
       <workItem from="1762003207764" duration="1762000" />
       <workItem from="1762005019691" duration="148000" />
-      <workItem from="1762020903432" duration="1144000" />
+      <workItem from="1762020903432" duration="1277000" />
     </task>
     <servers />
   </component>
