@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/gateway-server/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/gateway-server/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/gateway-server/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/gateway-server/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +131,7 @@
       </method>
     </configuration>
     <configuration name="BookServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="book-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.turkcell.book_service.BookServiceApplication" />
@@ -190,7 +190,8 @@
       <workItem from="1761993596520" duration="5941000" />
       <workItem from="1762003207764" duration="1762000" />
       <workItem from="1762005019691" duration="148000" />
-      <workItem from="1762020903432" duration="1277000" />
+      <workItem from="1762020903432" duration="1658000" />
+      <workItem from="1762022707539" duration="878000" />
     </task>
     <servers />
   </component>

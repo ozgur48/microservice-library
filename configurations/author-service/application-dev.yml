@@ -1,0 +1,28 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  kafka:
+    bootstrap-servers: localhost:9094
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9094
+      bindings:
+        orderCreated-out-0:
+          destination: order-topic
+          contentType: application/json
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/author_service
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: authorservice_db_password
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
