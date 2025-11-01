@@ -10,11 +10,13 @@
         <module name="gateway-server" />
         <module name="discovery-server" />
         <module name="book-service" />
+        <module name="bff-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bff-service" options="-parameters" />
       <module name="book-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovery-server" options="-parameters" />

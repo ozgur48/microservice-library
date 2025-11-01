@@ -5,8 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/CreateBookCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/CreateBookCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/dto/BookStatusDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/dto/CreatedBookResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/mapper/CreateBookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/CommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/Query.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/QueryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/AvailableCopies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/BookId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/BookStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Isbn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Language.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Title.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/TotalCopies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Year.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/BookEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/BookRepositoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/bff-service/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/bff-service/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,22 +46,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ozgur48"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ozgur48&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ozgur48/microservice-library.git",
-    "accountId": "cfe0dc1b-6ae6-4c38-9a58-9014512f229c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ozgur48/microservice-library.git&quot;,
+    &quot;accountId&quot;: &quot;cfe0dc1b-6ae6-4c38-9a58-9014512f229c&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -51,12 +84,14 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BffServiceApplication.executor": "Debug",
+    "Spring Boot.BookServiceApplication.executor": "Debug",
     "Spring Boot.ConfigServerApplication.executor": "Debug",
     "Spring Boot.DiscoveryServerApplication.executor": "Debug",
     "Spring Boot.GatewayServerApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ozgurdurak/Desktop/microservice-library",
+    "last_opened_file_path": "/Users/ozgurdurak/Desktop/microservice-library/book-service/src/main/java/com/turkcell/book_service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +108,17 @@
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service" />
+      <recent name="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application" />
+      <recent name="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure" />
+      <recent name="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.turkcell.book_service.interfaces.web" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -87,7 +133,10 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="BffServiceApplication" value="STOPPED" />
+              <entry key="BookServiceApplication" value="STOPPED" />
               <entry key="ConfigServerApplication" value="STOPPED" />
+              <entry key="DiscoveryServerApplication" value="STOPPED" />
               <entry key="GatewayServerApplication" value="STOPPED" />
             </map>
           </value>
@@ -95,7 +144,15 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServerApplication">
+  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
+    <configuration name="BffServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bff-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.turkcell.bff_service.BffServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BookServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="book-service" />
@@ -129,6 +186,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.BffServiceApplication" />
       <item itemvalue="Spring Boot.BookServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
@@ -151,7 +209,8 @@
       <option name="presentableId" value="Default" />
       <updated>1761992987470</updated>
       <workItem from="1761992988701" duration="270000" />
-      <workItem from="1761993596520" duration="1633000" />
+      <workItem from="1761993596520" duration="5941000" />
+      <workItem from="1762003207764" duration="699000" />
     </task>
     <servers />
   </component>

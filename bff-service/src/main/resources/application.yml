@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: bff-service
+  config:
+    import: configserver:http://localhost:8787
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8585/realms/turkcell-p1-dev
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: bff-service
+            client-secret: SqaF4BIjT0BYos5kT14hHbubQdDAqj6c
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+              - profile
+              - email
