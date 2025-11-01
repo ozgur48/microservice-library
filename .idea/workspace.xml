@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/CreateBookCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/CreateBookCommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/dto/BookStatusDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/dto/CreatedBookResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/mapper/CreateBookMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/CommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/Query.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/cqrs/QueryHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/AvailableCopies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/BookId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/BookStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Isbn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Language.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Title.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/TotalCopies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Year.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/BookEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/BookRepositoryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configurations/bff-service/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configurations/bff-service/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/book-service/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/book-service/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +55,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.BffServiceApplication.executor": "Debug",
-    "Spring Boot.BookServiceApplication.executor": "Debug",
+    "Spring Boot.BookServiceApplication.executor": "Run",
     "Spring Boot.ConfigServerApplication.executor": "Debug",
     "Spring Boot.DiscoveryServerApplication.executor": "Debug",
     "Spring Boot.GatewayServerApplication.executor": "Debug",
@@ -210,7 +180,7 @@
       <updated>1761992987470</updated>
       <workItem from="1761992988701" duration="270000" />
       <workItem from="1761993596520" duration="5941000" />
-      <workItem from="1762003207764" duration="699000" />
+      <workItem from="1762003207764" duration="1242000" />
     </task>
     <servers />
   </component>
