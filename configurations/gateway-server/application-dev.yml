@@ -1,3 +1,5 @@
+datasource:
+  url: localhost:5432
 eureka:
   client:
     service-url:
