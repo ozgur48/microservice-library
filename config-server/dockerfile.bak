@@ -1,0 +1,17 @@
+#sıfır bir makinede(freeDOS) bu projeyi nasıl kurarım?
+#İşletim sistemi -> java? -> maven? -> proje -> run
+
+
+#İşletim sistemi -> java? -> maven
+#single stage image boyutu büyük önerilmez
+FROM maven:3.9-eclipse-temurin-21
+
+# -> proje -> run
+WORKDIR /app
+
+COPY . .
+
+RUN mvn dependency:purge-local-repository
+RUN mvn -U clean package -DskipTests
+
+ENTRYPOINT ["java", "-jar", "target/config-server-0.0.1-SNAPSHOT.jar"]
