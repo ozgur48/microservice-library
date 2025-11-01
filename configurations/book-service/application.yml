@@ -1,7 +1,3 @@
-spring:
-  application:
-    name: book-service
-
 eureka:
   fetch-registry: true
   register-with-eureka: true
