@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/src/main/java/com/turkcell/diccovery_server/DiccoveryServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/turkcell/diccovery_server/DiccoveryServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diccovery-server/src/test/java/com/turkcell/diccovery_server/DiccoveryServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/test/java/com/turkcell/diccovery_server/DiccoveryServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +63,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -84,8 +75,19 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="ConfigServerApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DiscoveryServerApplication">
+  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
     <configuration name="BookServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="book-service" />
@@ -141,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761992987470</updated>
       <workItem from="1761992988701" duration="270000" />
-      <workItem from="1761993596520" duration="748000" />
+      <workItem from="1761993596520" duration="1237000" />
     </task>
     <servers />
   </component>

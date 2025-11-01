@@ -1,95 +1,94 @@
 services:
-  config-server:
-    image: halitkalayci/turkcell-45-config-server
-    ports:
-      - "8989:8989"
-  discovery-server:
-    image: halitkalayci/tcell-45-discovery-server
-    ports:
-      - "8761:8761"
-  gateway-server:
-    image: halitkalayci/tcell-45-gateway-server
-    ports:
-      - "8888:8888"
-    depends_on:
-      - config-server
+  booksv_db:
+    image: postgres:16
     environment:
-      - CONFIG_URI=http://config-server:8989
-  card-service:
-    image: ozgurdurak/tcell-card-server
+      POSTGRES_DB: book_service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: book_service_db_password
     ports:
-      - "8080:8080"
-  product-service:
-    image: ozgurdurak/tcell-product-service
-    ports:
-      - "8083:8083"
-
-
-
+      - "5433:5432"
+    volumes:
+      - bookdb_vol:/var/lib/postgres/data
   kafka:
     image: apache/kafka:3.8.0
-    container_name: kafka
     restart: unless-stopped
     ports:
-      - "9092:9092"   # container içi (PLAINTEXT) - diğer container'lar için
-      - "9094:9094"   # host'tan erişim (EXTERNAL)
+      - "9092:9092" # container içi (PLAINTEXT) - diğer container'lar için
+      - "9094:9094" # host'tan erişim (EXTERNAL)
     environment:
-      # KRaft (ZooKeeper yok)
       KAFKA_PROCESS_ROLES: "broker,controller"
       KAFKA_NODE_ID: "1"
-      # Controller quorum (tek düğüm)
       KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"
       KAFKA_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
 
-      # Listener tanımları
       KAFKA_LISTENERS: "PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094"
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT"
       KAFKA_INTER_BROKER_LISTENER_NAME: "PLAINTEXT"
 
-      # Advertised (içeriden ve dışarıdan erişim için)
-      # Sunucu DOCKER HOST'unda çalışıyorsa ve host IP'n sabitse onu yaz: EXTERNAL://<host-ip>:9094
-      # Lokal Windows/Mac için genelde host.docker.internal iş görür.
-      KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:9092,EXTERNAL://host.docker.internal:9094"
+      KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:9092,EXTERNAL://localhost:9094"
 
-      # Tek kopyalı ayarlar (tek düğüm olduğu için)
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: "1"
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: "1"
       KAFKA_NUM_PARTITIONS: "3"
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: "0"
 
-      # Storage / Cluster ID (KRaft için zorunlu)
-      # Loglarında gördüğün gibi image CLUSTER_ID bekliyor; güvenli taraf için ikisini de set edelim.
       CLUSTER_ID: "5L6g3nShT-eMCtK--X86sw"
       KAFKA_CLUSTER_ID: "5L6g3nShT-eMCtK--X86sw"
 
-      # Log dizini (container içi)
       KAFKA_LOG_DIRS: "/var/lib/kafka/data"
-
     volumes:
       - kafka-data:/var/lib/kafka/data
     networks:
       - kafkanet
-
   kafka-ui:
-      image: provectuslabs/kafka-ui:v0.7.2
-      container_name: kafka-ui
-      restart: unless-stopped
-      depends_on:
-        - kafka
-      ports:
-        - "8080:8080"
-      environment:
-        KAFKA_CLUSTERS_0_NAME: "local"
-        KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka:9092"
-        # İstersen Schema Registry vb. ekleyeceksen aşağıyı kullanırsın:
-        # KAFKA_CLUSTERS_0_SCHEMAREGISTRY: "http://schema-registry:8081"
-      networks:
-        - kafkanet
-
+    image: provectuslabs/kafka-ui:v0.7.2
+    restart: unless-stopped
+    depends_on:
+      - kafka
+    ports:
+      - "8079:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: "local"
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka:9092"
+    networks:
+      - kafkanet
+  keycloak_db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: keycloak
+    volumes:
+      - kc_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U keycloak -d keycloak" ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.5
+    depends_on:
+      keycloak_db:
+        condition: service_healthy
+    command:
+      - start-dev
+      - --http-port=8585
+    ports:
+      - "8585:8585"
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://keycloak_db:5432/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: keycloak
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HEALTH_ENABLED: "true"
+      KC_METRICS_ENABLED: "true"
 volumes:
-  kafka-data:
+  bookdb_vol: { }
+  kafka-data: { }
+  kc_pg_data: { }
 
 networks:
   kafkanet:
-

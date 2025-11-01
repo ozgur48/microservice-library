@@ -5,8 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/halitkalayci/4.5-microservices.git
-          default-label: master
+          uri: https://github.com/ozgur48/microservice-library.git
+          default-label: main
           search-paths:
             - configurations
             - configurations/{application}
@@ -14,4 +14,4 @@ spring:
           force-pull: true
           password: <token>
 server:
-  port: 8989
+  port: 8787
