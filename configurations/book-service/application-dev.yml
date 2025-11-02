@@ -25,7 +25,7 @@ spring:
           brokers: localhost:9094
       bindings:
         orderCreated-in-0:
-          destination: order-topic
+          destination: book-topic
           group: book-service
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect

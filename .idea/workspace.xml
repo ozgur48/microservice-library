@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +125,14 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.BookServiceApplication">
+    <configuration name="AuthorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="author-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.turkcell.author_service.AuthorServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BffServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bff-service" />
@@ -164,6 +175,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.AuthorServiceApplication" />
       <item itemvalue="Spring Boot.BffServiceApplication" />
       <item itemvalue="Spring Boot.BookServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -192,6 +204,7 @@
       <workItem from="1762005019691" duration="148000" />
       <workItem from="1762020903432" duration="1658000" />
       <workItem from="1762022707539" duration="878000" />
+      <workItem from="1762068191343" duration="1055000" />
     </task>
     <servers />
   </component>

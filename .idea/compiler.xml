@@ -11,11 +11,13 @@
         <module name="discovery-server" />
         <module name="book-service" />
         <module name="bff-service" />
+        <module name="author-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="author-service" options="-parameters" />
       <module name="bff-service" options="-parameters" />
       <module name="book-service" options="-parameters" />
       <module name="config-server" options="-parameters" />
