@@ -8,7 +8,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8585/realms/turkcell-p1-dev
+          issuer-uri: http://localhost:8585/realms/turkcell-library-p1-dev
   datasource:
     url: jdbc:postgresql://localhost:5433/book_service
     username: postgres
