@@ -22,4 +22,8 @@ public class BooksController {
     public CreatedBookResponse createBook(@Valid @RequestBody CreateBookCommand command){
         return createBookCommandHandler.handle(command);
     }
+    @GetMapping
+    public String getBook(){
+        return "merhaba";
+    }
 }

@@ -11,8 +11,8 @@ spring:
         binder:
           brokers: localhost:9094
       bindings:
-        orderCreated-out-0:
-          destination: order-topic
+        authorCreated-out-0:
+          destination: author-topic
           contentType: application/json
 
   datasource:

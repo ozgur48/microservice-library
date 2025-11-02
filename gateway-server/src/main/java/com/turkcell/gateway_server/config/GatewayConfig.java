@@ -16,6 +16,11 @@ public class GatewayConfig {
                         .path("/api/v1/books/**")
                         .filters(f -> f.retry(config -> config.setRetries(3)))
                         .uri("lb://book-service"))
+                .route("author-service", r -> r
+                        .path("/api/v1/authors/**")
+                        .filters(f->f.retry(config -> config.setRetries(3)))
+                        .uri("lb://author-service")
+                )
                 .route("fallback", r -> r
                         .path("/**")
                         .filters(f -> f.setStatus(HttpStatus.NOT_FOUND))
