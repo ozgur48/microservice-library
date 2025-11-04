@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/author-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/author-service/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/book-service/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +206,7 @@
       <workItem from="1762068191343" duration="15971000" />
       <workItem from="1762164856579" duration="731000" />
       <workItem from="1762197320990" duration="1290000" />
-      <workItem from="1762236521171" duration="341000" />
+      <workItem from="1762236521171" duration="677000" />
     </task>
     <servers />
   </component>

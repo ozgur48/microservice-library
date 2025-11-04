@@ -18,7 +18,7 @@ services:
     ports:
       - "5436:5432"
     volumes:
-      - bookdb_vol:/var/lib/postgres/data
+      - authordb_vol:/var/lib/postgres/data
   kafka:
     image: apache/kafka:3.8.0
     restart: unless-stopped
