@@ -20,7 +20,7 @@ spring:
     url: jdbc:postgresql://localhost:5436/author_service
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: authorservice_db_password
+    password: author_service_db_password
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
