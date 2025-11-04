@@ -15,8 +15,9 @@ spring:
           destination: author-topic
           contentType: application/json
 
+
   datasource:
-    url: jdbc:postgresql://localhost:5434/author_service
+    url: jdbc:postgresql://localhost:5436/author_service
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: authorservice_db_password

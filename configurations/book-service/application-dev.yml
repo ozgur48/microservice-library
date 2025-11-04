@@ -24,7 +24,7 @@ spring:
         binder:
           brokers: localhost:9094
       bindings:
-        orderCreated-in-0:
+        bookCreated-out-0:
           destination: book-topic
           group: book-service
   jpa:
