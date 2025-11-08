@@ -19,7 +19,7 @@ public class SecurityConfig {
         return http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(ex -> ex
-                        .pathMatchers("/actuator/**", "/v3/api-docs/**","/api/v1/books/**",
+                        .pathMatchers("/actuator/**", "/v3/api-docs/**",
                                 "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .anyExchange().authenticated())
                 .oauth2Login(Customizer.withDefaults())
