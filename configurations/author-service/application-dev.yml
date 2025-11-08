@@ -14,6 +14,7 @@ spring:
         bookCreated-in-0:
           destination: book-topic
           contentType: application/json
+          group: book-service
 
 
   datasource:

@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/author-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/author-service/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AuthorServiceApplication.executor": "Run",
+    "Spring Boot.AuthorServiceApplication.executor": "Debug",
     "Spring Boot.BffServiceApplication.executor": "Debug",
     "Spring Boot.BookServiceApplication.executor": "Debug",
     "Spring Boot.ConfigServerApplication.executor": "Debug",
@@ -218,7 +217,7 @@
       <workItem from="1762438222958" duration="2433000" />
       <workItem from="1762542353383" duration="2363000" />
       <workItem from="1762586509024" duration="11896000" />
-      <workItem from="1762624873083" duration="1550000" />
+      <workItem from="1762624873083" duration="1731000" />
     </task>
     <servers />
   </component>
