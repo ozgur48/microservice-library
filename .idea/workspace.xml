@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bff-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/controller/GatewayRelayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/controller/GatewayRelayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bff-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/CreateBookCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/CreateBookCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/BookEntityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/BookEntityMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/messaging/outbox/OutboxMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/messaging/outbox/OutboxMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/turkcell/gateway_server/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/turkcell/gateway_server/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/author-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/author-service/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +129,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
+  <component name="RunManager" selected="Spring Boot.BffServiceApplication">
     <configuration name="AuthorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="author-service" />
@@ -228,7 +217,8 @@
       <workItem from="1762324434222" duration="20880000" />
       <workItem from="1762438222958" duration="2433000" />
       <workItem from="1762542353383" duration="2363000" />
-      <workItem from="1762586509024" duration="11376000" />
+      <workItem from="1762586509024" duration="11896000" />
+      <workItem from="1762624873083" duration="416000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@ spring:
         binder:
           brokers: localhost:9094
       bindings:
-        authorCreated-out-0:
+        bookCreated-in-0:
           destination: author-topic
           contentType: application/json
 
