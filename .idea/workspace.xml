@@ -129,7 +129,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BffServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AuthorServiceApplication">
     <configuration name="AuthorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="author-service" />
