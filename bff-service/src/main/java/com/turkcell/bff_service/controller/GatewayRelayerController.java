@@ -29,7 +29,7 @@ public class GatewayRelayerController {
         String query = exchange.getRequest().getURI().getRawQuery();
         // id=1&name=abc&c=a
 
-        // localhost:8989/api/v1/products?page=0
+        // localhost:8888/api/v1/products?page=0
 
         String pathWithQuery = query != null ? downStreamPath + "?" + query : downStreamPath;
 

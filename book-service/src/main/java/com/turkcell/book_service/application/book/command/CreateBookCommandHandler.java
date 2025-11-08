@@ -24,6 +24,7 @@ public class CreateBookCommandHandler implements CommandHandler<CreateBookComman
     public CreatedBookResponse handle(CreateBookCommand command) {
         Book book = createBookMapper.toDomain(command);
         book = bookRepository.save(book);
+
         return createBookMapper.toResponse(book);
     }
 }

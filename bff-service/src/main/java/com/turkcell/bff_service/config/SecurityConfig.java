@@ -19,10 +19,12 @@ public class SecurityConfig {
         return http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(ex -> ex
-                        .pathMatchers("/actuator/**", "/v3/api-docs/**","/api/v1/books/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+                        .pathMatchers("/actuator/**", "/v3/api-docs/**","/api/v1/books/**",
+                                "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .anyExchange().authenticated())
                 .oauth2Login(Customizer.withDefaults())
                 .oauth2Client(Customizer.withDefaults())
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
                 .logout(l -> l.logoutUrl("/"))
                 .build();
     }

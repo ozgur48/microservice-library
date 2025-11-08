@@ -5,3 +5,22 @@ spring:
     active: dev
   config:
     import: configserver:http://localhost:8787
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8585/realms/turkcell-library-p1-dev
+
+    cloud:
+      gateway:
+        default-filters:
+          - TokenRelay
+          - RemoveRequestHeader=Cookie   # login redirect tetiklenmesin
+        routes:
+          # /api/** → BFF
+          - id: bff-service
+            uri: lb://bff-service
+            predicates:
+              - Path=/api/**
+            filters:
+              - RewritePath=/api/(?<segment>.*), /${segment}

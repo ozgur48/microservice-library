@@ -21,6 +21,15 @@ public class GatewayConfig {
                         .filters(f->f.retry(config -> config.setRetries(3)))
                         .uri("lb://author-service")
                 )
+                .route(
+                        "bff-service", r-> r
+                                .path("/api/**")
+                                .filters(f-> f
+                                        .removeRequestHeader("Cookie")
+                                        .rewritePath("/api/(?<segment>.*)", "/${segment}")
+                                        .tokenRelay())
+                                .uri("lb://bff-service")
+                )
                 .route("fallback", r -> r
                         .path("/**")
                         .filters(f -> f.setStatus(HttpStatus.NOT_FOUND))

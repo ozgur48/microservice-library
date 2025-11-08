@@ -21,6 +21,7 @@ public class OutboxMessage {
     private String aggregateType; // event tipleri BookCreatedEvent
     @Column(nullable = false, columnDefinition = "uuid")
     private UUID aggregateId;
+    private String eventType; // OrderCreatedEvent
     private String payloadJson;
 
     @Column(nullable = false)

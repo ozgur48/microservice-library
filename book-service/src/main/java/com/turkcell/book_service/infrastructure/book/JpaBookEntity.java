@@ -48,6 +48,24 @@ public class JpaBookEntity {
     @Column(nullable = false)
     private UUID publisherId;
 
+
+    public JpaBookEntity(UUID id, String title, LocalDate year, String language, int totalCopies, String isbn, BookStatus bookStatus, int availableCopies, UUID authorId, UUID publisherId) {
+        this.id = id;
+        this.title = title;
+        this.year = year;
+        this.language = language;
+        this.totalCopies = totalCopies;
+        this.isbn = isbn;
+        this.bookStatus = bookStatus;
+        this.availableCopies = availableCopies;
+        this.authorId = authorId;
+        this.publisherId = publisherId;
+    }
+
+    public JpaBookEntity() {
+
+    }
+
     public UUID id() {
         return id;
     }

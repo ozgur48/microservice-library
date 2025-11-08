@@ -6,17 +6,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class BookEntityMapper {
     public JpaBookEntity toEntity(Book book){
-        JpaBookEntity jpaBookEntity = new JpaBookEntity();
-        jpaBookEntity.setId(book.bookId().value());
-        jpaBookEntity.setTitle(book.title().value());
-        jpaBookEntity.setLanguage(book.language().value());
-        jpaBookEntity.setTotalCopies(book.totalCopies().copy());
-        jpaBookEntity.setAvailableCopies(book.availableCopies().copy());
-        jpaBookEntity.setYear(book.year().value());
-        jpaBookEntity.setIsbn(book.isbn().value());
-        jpaBookEntity.setBookStatus(book.bookStatus());
+        return new JpaBookEntity(
+                book.bookId().value(),
+                book.title().value(),
+                book.year().value(),
+                book.language().value(),
+                book.totalCopies().copy(),
+                book.isbn().value(),
+                book.bookStatus(),
+                book.availableCopies().copy(),
+                book.authorId(),
+                book.publisherId());
 
-        return jpaBookEntity;
+
     }
     public Book toDomain(JpaBookEntity jpaBookEntity){
 
