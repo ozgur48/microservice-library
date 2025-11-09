@@ -9,11 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class PublisherEntityMapper{
     public JpaPublisherEntity toEntity(Publisher publisher){
-        JpaPublisherEntity jpaPublisherEntity = new JpaPublisherEntity();
-        jpaPublisherEntity.setId(publisher.id().value());
-        jpaPublisherEntity.setName(publisher.name().value());
-        jpaPublisherEntity.setAddress(publisher.address().value());
-        return jpaPublisherEntity;
+        return new JpaPublisherEntity(
+                publisher.id().value(),
+                publisher.name().value(),
+                publisher.address().value()
+        );
+
     }
     public Publisher toDomain(JpaPublisherEntity jpaPublisherEntity){
         return Publisher.rehdyrate(

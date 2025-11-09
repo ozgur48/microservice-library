@@ -15,14 +15,19 @@ public class JpaPublisherEntity {
     @Column(columnDefinition = "uuid")
     private UUID id;
 
-
-
     @Column(nullable = false)
     @Size(min=1, max = 255)
     private String name;
 
     @Column(nullable = false, length = 255)
     private String address;
+
+    public JpaPublisherEntity(UUID id, String name, String address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+    }
+    public JpaPublisherEntity(){}
 
     public UUID id() {
         return id;

@@ -5,9 +5,10 @@ import com.turkcell.publisher_service.application.mapper.CreatePublisherMapper;
 import com.turkcell.publisher_service.cqrs.CommandHandler;
 import com.turkcell.publisher_service.domain.model.Publisher;
 import com.turkcell.publisher_service.domain.repository.PublisherRepository;
+import org.springframework.stereotype.Component;
 
-public class CreatePublisherCommandHandler
-        implements CommandHandler<CreatePublisherCommand, CreatedPublisherResponse> {
+@Component
+public class CreatePublisherCommandHandler implements CommandHandler<CreatePublisherCommand, CreatedPublisherResponse> {
 
     private final PublisherRepository publisherRepository;
     private final CreatePublisherMapper createPublisherMapper;
