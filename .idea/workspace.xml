@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/turkcell/gateway_server/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/turkcell/gateway_server/config/GatewayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/publisher-service/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/publisher-service/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +227,7 @@
       <workItem from="1762542353383" duration="2363000" />
       <workItem from="1762586509024" duration="11896000" />
       <workItem from="1762624873083" duration="6485000" />
-      <workItem from="1762672587860" duration="4960000" />
+      <workItem from="1762672587860" duration="5109000" />
     </task>
     <servers />
   </component>
