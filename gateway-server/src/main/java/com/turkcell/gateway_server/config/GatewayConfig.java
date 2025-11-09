@@ -20,7 +20,10 @@ public class GatewayConfig {
                         .path("/api/v1/authors/**")
                         .filters(f->f.retry(config -> config.setRetries(3)))
                         .uri("lb://author-service")
-                )
+                ).route("publisher-service", r-> r
+                        .path("/api/v1/publishers/**")
+                        .filters(f->f.retry(config -> config.setRetries(3)))
+                        .uri("lb://publisher-service"))
                 .route(
                         "bff-service", r-> r
                                 .path("/api/**")
@@ -30,6 +33,7 @@ public class GatewayConfig {
                                         .tokenRelay())
                                 .uri("lb://bff-service")
                 )
+
                 .route("fallback", r -> r
                         .path("/**")
                         .filters(f -> f.setStatus(HttpStatus.NOT_FOUND))
