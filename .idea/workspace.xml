@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/command/CreatePublisherCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/command/CreatePublisherCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/dto/CreatedPublisherResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/mapper/CreatePublisherMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/cqrs/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/cqrs/CommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/cqrs/Query.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/cqrs/QueryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/event/PublisherCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/event/PublisherCreatedFailedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/model/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/model/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/model/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/model/PublisherId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/repository/PublisherRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/infrastructure/JpaPublisherEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/infrastructure/JpaPublisherRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/infrastructure/PublisherEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/infrastructure/PublisherRepositoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/interfaces/web/PublishersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/messaging/OutboxMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/messaging/OutboxRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/messaging/OutboxStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/relayer/OutboxEventRelayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +42,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -23,16 +52,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;ozgur48&quot;
-  }
-}</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "ozgur48"
+    }
+  ],
+  "lastFilter": {}
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ozgur48/microservice-library.git&quot;,
-    &quot;accountId&quot;: &quot;cfe0dc1b-6ae6-4c38-9a58-9014512f229c&quot;
+    &quot;url&quot;: &quot;git@github.com:ozgur48/microservice-library.git&quot;,
+    &quot;accountId&quot;: &quot;1a4768d6-2b8f-4296-b0c6-8f9bb5493bf3&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -67,7 +98,8 @@
     &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;publisher-service&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/ozgurdurak/Desktop/microservice-library/book-service/src/main/java/com/turkcell/book_service&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -76,10 +108,10 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -106,24 +138,8 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="configurationStatuses">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <map>
-              <entry key="AuthorServiceApplication" value="STOPPED" />
-              <entry key="BffServiceApplication" value="STOPPED" />
-              <entry key="BookServiceApplication" value="STOPPED" />
-              <entry key="ConfigServerApplication" value="STOPPED" />
-              <entry key="DiscoveryServerApplication" value="STOPPED" />
-              <entry key="GatewayServerApplication" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthorServiceApplication">
+  <component name="RunManager">
     <configuration name="AuthorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="author-service" />
@@ -173,22 +189,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Spring Boot.AuthorServiceApplication" />
-      <item itemvalue="Spring Boot.BffServiceApplication" />
-      <item itemvalue="Spring Boot.BookServiceApplication" />
-      <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
-      <item itemvalue="Spring Boot.GatewayServerApplication" />
-    </list>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
