@@ -24,6 +24,10 @@ public class GatewayConfig {
                         .path("/api/v1/publishers/**")
                         .filters(f->f.retry(config -> config.setRetries(3)))
                         .uri("lb://publisher-service"))
+                .route("member-service", r-> r
+                        .path("/api/v1/members/**")
+                        .filters(f->f.retry(config -> config.setRetries(3)))
+                        .uri("lb://member-service"))
                 .route(
                         "bff-service", r-> r
                                 .path("/api/**")

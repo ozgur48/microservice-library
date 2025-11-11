@@ -9,11 +9,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name="members")
-
 public class JpaMemberEntity {
     @Id
-    @Column(columnDefinition = "uuid")
+    @Column(name = "id", columnDefinition = "uuid")
     private UUID id;
+
     @Column(nullable = false)
     private String name;
 

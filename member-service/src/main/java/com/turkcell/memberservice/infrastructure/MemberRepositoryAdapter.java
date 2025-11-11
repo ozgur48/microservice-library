@@ -20,7 +20,7 @@ public class MemberRepositoryAdapter implements MemberRepository {
 
     @Override
     public Member save(Member member) {
-        JpaMemberEntity entity = new JpaMemberEntity();
+        JpaMemberEntity entity = memberEntityMapper.toEntity(member);
         entity = jpaMemberRepository.save(entity);
         return memberEntityMapper.toDomain(entity);
     }
