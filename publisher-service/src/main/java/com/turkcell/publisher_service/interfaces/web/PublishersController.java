@@ -37,7 +37,7 @@ public class PublishersController {
     @ResponseStatus(HttpStatus.CREATED)
     public CreatedPublisherResponse createBook(@Valid @RequestBody CreatePublisherCommand command) {
         CreatedPublisherResponse publisher = createPublisherCommandHandler.handle(command);
-        streamBridge.send("publisherCreated-out", publisher.id() + publisher.name());
+        streamBridge.send("publisherCreated-out", publisher.name());
         return publisher;
     }
 
