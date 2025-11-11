@@ -11,6 +11,7 @@
         <module name="book-service" />
         <module name="bff-service" />
         <module name="gateway-server" />
+        <module name="member-service" />
         <module name="author-service" />
         <module name="publisher-service" />
       </profile>
@@ -24,6 +25,7 @@
       <module name="config-server" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
+      <module name="member-service" options="-parameters" />
       <module name="publisher-service" options="-parameters" />
     </option>
   </component>

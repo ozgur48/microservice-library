@@ -5,9 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/configurations/member-service/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/member-service/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/MemberId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/MemberShipLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/MemberStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/port/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/infrastructure/JpaMemberEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/infrastructure/JpaMemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/infrastructure/MemberEntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/infrastructure/MemberRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/publisher-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/interfaces/web/PublishersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/interfaces/web/PublishersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +34,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Record" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -74,7 +91,7 @@
     "Spring Boot.PublisherServiceApplication.executor": "Debug",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ozgurdurak/Desktop/microservice-library/author-service/src/main/java/com/turkcell/author_service/core/cqrs",
+    "last_opened_file_path": "/Users/ozgurdurak/Desktop/microservice-library",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -181,6 +198,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MemberServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="member-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.turkcell.memberservice.MemberServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PublisherServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="publisher-service" />
@@ -190,6 +215,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.MemberServiceApplication" />
       <item itemvalue="Spring Boot.PublisherServiceApplication" />
       <item itemvalue="Spring Boot.AuthorServiceApplication" />
       <item itemvalue="Spring Boot.BffServiceApplication" />
@@ -231,6 +257,8 @@
       <workItem from="1762586509024" duration="11896000" />
       <workItem from="1762624873083" duration="6485000" />
       <workItem from="1762672587860" duration="8622000" />
+      <workItem from="1762853023332" duration="1719000" />
+      <workItem from="1762854833424" duration="4533000" />
     </task>
     <servers />
   </component>
