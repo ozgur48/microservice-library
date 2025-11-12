@@ -7,4 +7,5 @@ import java.util.UUID;
 
 @Repository
 public interface JpaBookRepository extends JpaRepository<JpaBookEntity, UUID> {
+
 }

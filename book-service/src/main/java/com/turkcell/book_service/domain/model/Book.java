@@ -58,6 +58,11 @@ public class Book {
                 publisherId
         );
     }
+    public void updateBookDetails(Title title, Language language, Year year){
+       this.title = title;
+       this.language = language;
+       this.year = year;
+    }
     public BookId bookId() {
         return bookId;
     }
