@@ -1,13 +1,16 @@
 package com.turkcell.book_service.interfaces.web;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turkcell.book_service.application.book.command.CreateBookCommand;
+import com.turkcell.book_service.application.book.command.DeleteBookCommand;
 import com.turkcell.book_service.application.book.command.UpdateBookCommand;
+import com.turkcell.book_service.application.book.dto.BookDetails;
 import com.turkcell.book_service.application.book.dto.CreatedBookResponse;
+import com.turkcell.book_service.application.book.dto.DeletedBookResponse;
 import com.turkcell.book_service.application.book.dto.UpdatedBookResponse;
+import com.turkcell.book_service.application.book.query.GetBookDetailsQuery;
 import com.turkcell.book_service.cqrs.CommandHandler;
-import com.turkcell.book_service.messaging.outbox.OutboxMessage;
+import com.turkcell.book_service.cqrs.QueryHandler;
 import com.turkcell.book_service.messaging.outbox.OutboxRepository;
 import jakarta.validation.Valid;
 import org.springframework.cloud.stream.function.StreamBridge;
@@ -25,14 +28,21 @@ import java.util.UUID;
 public class BooksController {
     private final CommandHandler<CreateBookCommand, CreatedBookResponse> createBookCommandHandler;
     private final CommandHandler<UpdateBookCommand, UpdatedBookResponse> updateBookCommandHandler;
+    private final CommandHandler<DeleteBookCommand, DeletedBookResponse> deleteBookCommandHandler;
+
+    private final QueryHandler<GetBookDetailsQuery, BookDetails> getBookByIdQueryHandler;
+
+
     private final OutboxRepository outboxRepository;
     private final ObjectMapper objectMapper;
     private final StreamBridge streamBridge;
 
 
-    public BooksController(CommandHandler<CreateBookCommand, CreatedBookResponse> createBookCommandHandler, CommandHandler<UpdateBookCommand, UpdatedBookResponse> updateBookCommandHandler, OutboxRepository outboxRepository, ObjectMapper objectMapper, StreamBridge streamBridge) {
+    public BooksController(CommandHandler<CreateBookCommand, CreatedBookResponse> createBookCommandHandler, CommandHandler<UpdateBookCommand, UpdatedBookResponse> updateBookCommandHandler, CommandHandler<DeleteBookCommand, DeletedBookResponse> deleteBookCommandHandler, QueryHandler<GetBookDetailsQuery, BookDetails> getBookByIdQueryHandler, OutboxRepository outboxRepository, ObjectMapper objectMapper, StreamBridge streamBridge) {
         this.createBookCommandHandler = createBookCommandHandler;
         this.updateBookCommandHandler = updateBookCommandHandler;
+        this.deleteBookCommandHandler = deleteBookCommandHandler;
+        this.getBookByIdQueryHandler = getBookByIdQueryHandler;
         this.outboxRepository = outboxRepository;
         this.objectMapper = objectMapper;
         this.streamBridge = streamBridge;
@@ -56,10 +66,22 @@ public class BooksController {
         UpdatedBookResponse response = updateBookCommandHandler.handle(finalCommand);
         return ResponseEntity.ok(response);
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<DeletedBookResponse> deleteBook(@Valid @PathVariable UUID id, DeleteBookCommand command){
+        DeleteBookCommand finalCommand = new DeleteBookCommand(
+                id
+        );
+        DeletedBookResponse response = deleteBookCommandHandler.handle(finalCommand);
+        return ResponseEntity.ok(response);
+    }
 
-    @GetMapping()
-    public String getBook(){
-        return "Merhaba benim yeni kitabım: ";
+    @GetMapping("/{id}")
+    public BookDetails getBook(@Valid @PathVariable UUID id, GetBookDetailsQuery query){
+        GetBookDetailsQuery finalQuery = new GetBookDetailsQuery(
+                id
+        );
+        BookDetails response = getBookByIdQueryHandler.handle(finalQuery);
+        return response;
     }
     /*
     @PostMapping

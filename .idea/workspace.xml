@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/UpdateBookCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/UpdateBookCommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/dto/UpdatedBookResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/mapper/UpdateBookResponseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/exception/BookNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/DeleteBookCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/DeleteBookCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/dto/DeletedBookResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/mapper/BookDetailsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/query/GetBookDetailsQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/query/GetBookDetailsQueryHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/infrastructure/book/JpaBookRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -250,7 +249,8 @@
       <workItem from="1762672587860" duration="8622000" />
       <workItem from="1762853023332" duration="1719000" />
       <workItem from="1762854833424" duration="11302000" />
-      <workItem from="1762941826773" duration="8455000" />
+      <workItem from="1762941826773" duration="8544000" />
+      <workItem from="1762974192109" duration="3051000" />
     </task>
     <servers />
   </component>
