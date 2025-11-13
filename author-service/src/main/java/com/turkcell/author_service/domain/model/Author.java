@@ -27,6 +27,10 @@ public class Author {
         Objects.requireNonNull(newSurName, "Yazar soyismi boş olamaz");
         this.surname = newSurName;
     }
+    public void updateAuthor(Name name, Surname surname){
+        this.name = name;
+        this.surname = surname;
+    }
 
     public AuthorId id() {
         return id;

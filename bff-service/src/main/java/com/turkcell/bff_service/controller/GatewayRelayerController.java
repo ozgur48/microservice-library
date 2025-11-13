@@ -1,5 +1,6 @@
 package com.turkcell.bff_service.controller;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.net.URI;
+import java.util.List;
 
 @RequestMapping("/api")
 @RestController
@@ -25,6 +27,7 @@ public class GatewayRelayerController {
     public Mono<ResponseEntity<byte[]>> relay(ServerWebExchange exchange,
                                               @RequestBody(required = false) Mono<byte[]> body) {
         URI fullPath = exchange.getRequest().getURI();
+        // headerda tokenda taşınmalı
         String downStreamPath = exchange.getRequest().getURI().getPath();
         String query = exchange.getRequest().getURI().getRawQuery();
         // id=1&name=abc&c=a
@@ -33,11 +36,12 @@ public class GatewayRelayerController {
 
         String pathWithQuery = query != null ? downStreamPath + "?" + query : downStreamPath;
 
-        String fullRequestPath = "http://gateway-server/" + pathWithQuery;
-
+        String fullRequestPath = "http://gateway-server" + pathWithQuery;
+        String authorizationHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
         return webClient
                 .method(exchange.getRequest().getMethod())
                 .uri(fullRequestPath)
+                .header(HttpHeaders.AUTHORIZATION, authorizationHeader)
                 .body(body != null ? BodyInserters.fromPublisher(body, byte[].class) : BodyInserters.empty())
                 .exchangeToMono(response -> response.toEntity(byte[].class));
     }

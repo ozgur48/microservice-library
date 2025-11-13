@@ -10,6 +10,6 @@ public class BookNotFoundException extends RuntimeException{
         super("Book, ID: " + bookId + "could not find.!");
     }
     public  BookNotFoundException(BookId bookId){
-        super("Book, ID: " + bookId + "could not find.!");
+        super("Book, ID: " + bookId.value() + "could not find.!");
     }
 }

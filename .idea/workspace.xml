@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/DeleteBookCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/command/DeleteBookCommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/dto/DeletedBookResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/mapper/BookDetailsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/query/GetBookDetailsQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/application/book/query/GetBookDetailsQueryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdateAuthorCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdatedAuthorCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/dto/UpdatedAuthorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/mapper/UpdateAuthorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/exception/AuthorNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/interfaces/web/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/controller/GatewayRelayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/controller/GatewayRelayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/exception/BookNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/exception/BookNotFoundException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +141,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AuthorServiceApplication">
     <configuration name="AuthorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="author-service" />
@@ -250,7 +253,11 @@
       <workItem from="1762853023332" duration="1719000" />
       <workItem from="1762854833424" duration="11302000" />
       <workItem from="1762941826773" duration="8544000" />
-      <workItem from="1762974192109" duration="3051000" />
+      <workItem from="1762974192109" duration="3719000" />
+      <workItem from="1763045173364" duration="4208000" />
+      <workItem from="1763059650815" duration="209000" />
+      <workItem from="1763059867027" duration="44000" />
+      <workItem from="1763060345406" duration="3060000" />
     </task>
     <servers />
   </component>
