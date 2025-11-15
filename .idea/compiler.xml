@@ -10,6 +10,7 @@
         <module name="discovery-server" />
         <module name="book-service" />
         <module name="bff-service" />
+        <module name="loan-service" />
         <module name="gateway-server" />
         <module name="member-service" />
         <module name="author-service" />
@@ -25,6 +26,7 @@
       <module name="config-server" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
+      <module name="loan-service" options="-parameters" />
       <module name="member-service" options="-parameters" />
       <module name="publisher-service" options="-parameters" />
     </option>

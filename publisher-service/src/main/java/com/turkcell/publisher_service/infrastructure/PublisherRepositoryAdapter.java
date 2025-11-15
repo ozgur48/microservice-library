@@ -49,6 +49,7 @@ public class PublisherRepositoryAdapter implements PublisherRepository {
                 .toList();
     }
 
+
     @Override
     public void delete(PublisherId publisherId) {
         jpaPublisherRepository.deleteById(publisherId.value());

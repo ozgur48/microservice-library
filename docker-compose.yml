@@ -39,6 +39,16 @@ services:
       - "5438:5432"
     volumes:
       - memberdb_vol:/var/lib/postgres/data
+  loansv_db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: loan_service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: loan_service_db_password
+    ports:
+      - "5439:5432"
+    volumes:
+      - loandb_vol:/var/lib/postgres/data
   kafka:
     image: apache/kafka:3.8.0
     restart: unless-stopped
@@ -119,6 +129,7 @@ volumes:
   bookdb_vol: { }
   authordb_vol: { }
   publisherdb_vol: { }
+  loandb_vol: { }
   memberdb_vol: { }
   kafka-data: { }
   kc_pg_data: { }

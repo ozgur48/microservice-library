@@ -23,10 +23,15 @@ public class Publisher {
                 name,
                 address);
     }
-    public void changeAddress(Address newAdress){
+    public void updateName(Name newName){
+        Objects.requireNonNull(newName);
+        this.name = newName;
+    }
+    public void UpdateAddress(Address newAdress){
         Objects.requireNonNull(newAdress);
         this.address = newAdress;
     }
+
     public PublisherId id() {
         return id;
     }
