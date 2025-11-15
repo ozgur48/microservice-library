@@ -5,7 +5,6 @@ import com.turkcell.loanservice.domain.model.LoanId;
 import com.turkcell.loanservice.domain.port.LoanRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

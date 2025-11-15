@@ -5,49 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/configurations/loan-service/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configurations/loan-service/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/cqrs/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/cqrs/CommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/cqrs/Query.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/cqrs/QueryHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/exception/DueDateMustBeAfterCurrentDueDateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/exception/LoanAlreadyReturnedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/exception/ReturnDateMustBeAfterLoanDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/BookId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/DueDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/LoanDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/LoanId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/LoanStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/MemberId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/ReturnDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/StaffId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/port/LoanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/JpaLoanEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/JpaLoanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/LoanEntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/LoanRepositoryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/command/DeletePublisherCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/command/DeletePublisherCommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/command/UpdatePublisherCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/command/UpdatePublisherCommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/dto/DeletedPublisherResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/dto/PublisherDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/dto/UpdatedPublisherResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/mapper/PublisherDetailsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/mapper/UpdatePublisherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/query/GetPublisherDetailsQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/application/query/GetPublisherDetailsQueryHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/exception/PublisherNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/model/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/domain/model/Publisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/infrastructure/PublisherRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/publisher-service/src/main/java/com/turkcell/publisher_service/infrastructure/PublisherRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/LoanRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/LoanRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,9 +68,10 @@
     "Spring Boot.AuthorServiceApplication.executor": "Debug",
     "Spring Boot.BffServiceApplication.executor": "Debug",
     "Spring Boot.BookServiceApplication.executor": "Debug",
-    "Spring Boot.ConfigServerApplication.executor": "Run",
-    "Spring Boot.DiscoveryServerApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Debug",
+    "Spring Boot.DiscoveryServerApplication.executor": "Debug",
     "Spring Boot.GatewayServerApplication.executor": "Debug",
+    "Spring Boot.LoanServiceApplication.executor": "Debug",
     "Spring Boot.MemberServiceApplication.executor": "Debug",
     "Spring Boot.PublisherServiceApplication.executor": "Debug",
     "git-widget-placeholder": "main",
@@ -165,6 +126,7 @@
               <entry key="ConfigServerApplication" value="STOPPED" />
               <entry key="DiscoveryServerApplication" value="STOPPED" />
               <entry key="GatewayServerApplication" value="STOPPED" />
+              <entry key="LoanServiceApplication" value="STOPPED" />
               <entry key="MemberServiceApplication" value="STOPPED" />
               <entry key="PublisherServiceApplication" value="STOPPED" />
             </map>
@@ -173,7 +135,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthorServiceApplication">
+  <component name="RunManager" selected="Spring Boot.LoanServiceApplication">
     <configuration name="AuthorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="author-service" />
@@ -304,7 +266,7 @@
       <workItem from="1763203191096" duration="7731000" />
       <workItem from="1763224487400" duration="2724000" />
       <workItem from="1763227256386" duration="981000" />
-      <workItem from="1763232145650" duration="8555000" />
+      <workItem from="1763232145650" duration="8781000" />
     </task>
     <servers />
   </component>
