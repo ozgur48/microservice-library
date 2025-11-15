@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdateAuthorCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdatedAuthorCommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/dto/UpdatedAuthorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/mapper/UpdateAuthorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/exception/AuthorNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/DeleteAuthorCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/DeleteAuthorCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/dto/AuthorDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/dto/DeletedAuthorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/mapper/AuthorDetailsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/query/GetAuthorDetailsQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/query/GetAuthorDetailsQueryHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdatedAuthorCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdatedAuthorCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/exception/AuthorNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/exception/AuthorNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/model/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/controller/GatewayRelayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/java/com/turkcell/bff_service/controller/GatewayRelayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bff-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bff-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/exception/BookNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/turkcell/book_service/domain/exception/BookNotFoundException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +28,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -76,8 +77,8 @@
     &quot;Spring Boot.AuthorServiceApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.BffServiceApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.BookServiceApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.MemberServiceApplication.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.PublisherServiceApplication.executor&quot;: &quot;Debug&quot;,
@@ -257,7 +258,10 @@
       <workItem from="1763045173364" duration="4208000" />
       <workItem from="1763059650815" duration="209000" />
       <workItem from="1763059867027" duration="44000" />
-      <workItem from="1763060345406" duration="3060000" />
+      <workItem from="1763060345406" duration="3137000" />
+      <workItem from="1763146022681" duration="598000" />
+      <workItem from="1763188266772" duration="1613000" />
+      <workItem from="1763203191096" duration="3038000" />
     </task>
     <servers />
   </component>

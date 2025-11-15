@@ -28,6 +28,10 @@ public class UpdatedAuthorCommandHandler implements CommandHandler<UpdateAuthorC
                 .orElseThrow(()-> new AuthorNotFoundException(command.authorId()));
         Name name = new Name(command.name());
         Surname surname = new Surname(command.surname());
+        // burada 2 farklı methodla güncelledim
+        //author.reName(name);
+        //author.reSurName(surname);
+        // burada update methoduyla
         author.updateAuthor(name, surname);
         authorRepository.save(author);
         return updateAuthorMapper.toResponse(author);

@@ -23,11 +23,13 @@ public class Author {
         Objects.requireNonNull(newName, "Yazar ismi boş olamaz");
         this.name = newName;
     }
-    public void reName(Surname newSurName){
+    public void reSurName(Surname newSurName){
         Objects.requireNonNull(newSurName, "Yazar soyismi boş olamaz");
         this.surname = newSurName;
     }
     public void updateAuthor(Name name, Surname surname){
+        Objects.requireNonNull(name, "Yazar ismi boş olamaz");
+        Objects.requireNonNull(surname, "Yazar soyismi boş olamaz");
         this.name = name;
         this.surname = surname;
     }

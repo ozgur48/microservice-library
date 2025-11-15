@@ -10,6 +10,5 @@ public class AuthorNotFoundException extends RuntimeException{
     }
     public AuthorNotFoundException(AuthorId id){
         super("Author, with: " + id.value() + " could not find!");
-
     }
 }
