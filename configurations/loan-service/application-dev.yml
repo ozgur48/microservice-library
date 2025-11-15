@@ -25,7 +25,7 @@ spring:
     url: jdbc:postgresql://localhost:5439/loan_service
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: member_service_db_password
+    password: loan_service_db_password
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
