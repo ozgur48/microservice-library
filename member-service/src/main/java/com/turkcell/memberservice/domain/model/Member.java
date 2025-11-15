@@ -29,11 +29,17 @@ public class Member {
     public static Member rehydrate(MemberId id, Name name, Email email, Phone phone, Address address, MemberShipLevel memberShipLevel, MemberStatus memberStatus){
         return new Member(id, name, email, phone, address, memberShipLevel, memberStatus);
     }
-    public void changeName(Name name){
+    public void updateName(Name name){
         this.name = name;
     }
-    public void changeAddress(Address newAddress){
+    public void updateAddress(Address newAddress){
         this.address = newAddress;
+    }
+    public void updateEmail(Email newEmail){
+        this.email = newEmail;
+    }
+    public void updatePhone(Phone newPhone){
+        this.phone = newPhone;
     }
 
     public MemberId id() {

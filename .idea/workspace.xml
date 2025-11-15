@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/DeleteAuthorCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/DeleteAuthorCommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/dto/AuthorDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/dto/DeletedAuthorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/mapper/AuthorDetailsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/query/GetAuthorDetailsQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/query/GetAuthorDetailsQueryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/command/UpdateMemberCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/dto/UpdatedMemberResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/mapper/UpdateMemberMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdatedAuthorCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/application/command/UpdatedAuthorCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/exception/AuthorNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/exception/AuthorNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/domain/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/author-service/src/main/java/com/turkcell/author_service/interfaces/web/AuthorsControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Member.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +21,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -261,7 +254,7 @@
       <workItem from="1763060345406" duration="3137000" />
       <workItem from="1763146022681" duration="598000" />
       <workItem from="1763188266772" duration="1613000" />
-      <workItem from="1763203191096" duration="3038000" />
+      <workItem from="1763203191096" duration="3657000" />
     </task>
     <servers />
   </component>
