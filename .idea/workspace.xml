@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/command/UpdateMemberCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/dto/UpdatedMemberResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/mapper/UpdateMemberMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/command/DeleteMemberCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/command/DeleteMemberCommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/dto/DeletedMemberResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/dto/MemberDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/mapper/MemberDetailsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/query/GetMemberDetailsQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/query/GetMemberDetailsQueryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/exception/MemberNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/command/UpdateMemberCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/command/UpdateMemberCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/mapper/UpdateMemberMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/application/mapper/UpdateMemberMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/domain/model/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/interfaces/web/MembersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/member-service/src/main/java/com/turkcell/memberservice/interfaces/web/MembersController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +262,7 @@
       <workItem from="1763060345406" duration="3137000" />
       <workItem from="1763146022681" duration="598000" />
       <workItem from="1763188266772" duration="1613000" />
-      <workItem from="1763203191096" duration="3657000" />
+      <workItem from="1763203191096" duration="7268000" />
     </task>
     <servers />
   </component>

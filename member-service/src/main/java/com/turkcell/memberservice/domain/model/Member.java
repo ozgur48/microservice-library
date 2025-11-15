@@ -1,7 +1,5 @@
 package com.turkcell.memberservice.domain.model;
 
-import java.util.Objects;
-
 public class Member {
     private final MemberId id;
     private Name name;
