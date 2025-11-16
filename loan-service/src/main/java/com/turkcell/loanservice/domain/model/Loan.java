@@ -12,8 +12,9 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
-public class Loan {
+public class Loan implements AggregateRoot{
 
     private final LoanId loanId;
     private final MemberId memberId;
@@ -135,12 +136,20 @@ public class Loan {
     public StaffId staffId() {
         return staffId;
     }
+
+    @Override
     // olayları okumak için
     public List<DomainEvent> getDomainEvents(){
         return Collections.unmodifiableList(domainEvents);
     }
+    @Override
     public void clearDomainEvents(){
         this.domainEvents.clear();
+    }
+
+    @Override
+    public UUID getIdValue() {
+        return this.loanId.value();
     }
 
 }

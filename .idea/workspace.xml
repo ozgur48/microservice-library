@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/messaging/Outbox/OutboxMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/messaging/Outbox/OutboxRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/messaging/Outbox/OutboxStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/messaging/Relayer/OutboxEventRelayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/AggregateRoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/infrastructure/messaging/Outbox/OutboxEventSaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/loan-service/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/loan-service/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/LoanServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/LoanServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/LoanId.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/LoanId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/MemberId.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/MemberId.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +19,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -274,7 +268,7 @@
       <workItem from="1763224487400" duration="2724000" />
       <workItem from="1763227256386" duration="981000" />
       <workItem from="1763232145650" duration="9179000" />
-      <workItem from="1763280779221" duration="13673000" />
+      <workItem from="1763280779221" duration="18265000" />
     </task>
     <servers />
   </component>
