@@ -1,10 +1,18 @@
 package com.turkcell.loanservice.domain.model;
 
+import com.turkcell.loanservice.domain.event.BookReturnedEvent;
+import com.turkcell.loanservice.domain.event.DomainEvent;
+import com.turkcell.loanservice.domain.event.LoanBecameOverdueEvent;
+import com.turkcell.loanservice.domain.event.LoanDueDateExtendedEvent;
 import com.turkcell.loanservice.domain.exception.DueDateMustBeAfterCurrentDueDateException;
 import com.turkcell.loanservice.domain.exception.LoanAlreadyReturnedException;
 import com.turkcell.loanservice.domain.exception.ReturnDateMustBeAfterLoanDate;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Loan {
 
@@ -17,6 +25,8 @@ public class Loan {
     private LoanDate loanDate;
     private ReturnDate returnDate;
     private LoanStatus loanStatus;
+
+    private final List<DomainEvent> domainEvents = new ArrayList<>();
 
     public Loan(LoanId loanId, MemberId memberId, BookId bookId, StaffId staffId,
                 DueDate dueDate, LoanDate loanDate, ReturnDate returnDate, LoanStatus loanStatus) {
@@ -54,6 +64,7 @@ public class Loan {
         if(newDueDate.value().isBefore(this.dueDate.value())){
             throw new DueDateMustBeAfterCurrentDueDateException(this.loanId.value(), this.dueDate.value(), newDueDate.value());
         }
+        domainEvents.add(new LoanDueDateExtendedEvent(this.loanId, this.bookId, newDueDate.value()));
     }
 
     public void markAsReturned(ReturnDate actualReturnDate){
@@ -67,6 +78,8 @@ public class Loan {
         }
         this.returnDate = actualReturnDate;
         this.loanStatus = LoanStatus.RETURNED;
+
+        domainEvents.add(new BookReturnedEvent(this.loanId, this.memberId, this.bookId));
 
         // 4. Domain Event Yayınlama (Nihai tutarlılık için)
         // Bu olay, başka bir Aggregate'i (Book Aggregate'i, Member Aggregate'i) bilgilendirmelidir.
@@ -85,8 +98,11 @@ public class Loan {
 
             // 4. Domain Event Yayınlama
             // Bu olay, ceza (fee) hesaplama servisini veya Member Aggregate'i bilgilendirmelidir.
+
             // DomainEvents.publish(new LoanBecameOverdueEvent(this.loanId, this.memberId, this.bookId));
+            domainEvents.add(new LoanBecameOverdueEvent(this.loanId, this.memberId));
         }
+
     }
 
     public LoanId loanId() {
@@ -120,4 +136,12 @@ public class Loan {
     public StaffId staffId() {
         return staffId;
     }
+    // olayları okumak için
+    public List<DomainEvent> getDomainEvents(){
+        return Collections.unmodifiableList(domainEvents);
+    }
+    public void clearDomainEvents(){
+        this.domainEvents.clear();
+    }
+
 }

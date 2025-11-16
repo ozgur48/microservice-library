@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3328f3ca-bf59-4b30-8119-7868ab119965" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/loan-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/event/BookReturnedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/event/DomainEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/event/LoanBecameOverdueEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/event/LoanDueDateExtendedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/com/turkcell/loanservice/domain/model/Loan.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +21,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Record" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -52,42 +57,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AuthorServiceApplication.executor": "Debug",
-    "Spring Boot.BffServiceApplication.executor": "Debug",
-    "Spring Boot.BookServiceApplication.executor": "Debug",
-    "Spring Boot.ConfigServerApplication.executor": "Debug",
-    "Spring Boot.DiscoveryServerApplication.executor": "Debug",
-    "Spring Boot.GatewayServerApplication.executor": "Debug",
-    "Spring Boot.LoanServiceApplication.executor": "Debug",
-    "Spring Boot.MemberServiceApplication.executor": "Debug",
-    "Spring Boot.PublisherServiceApplication.executor": "Debug",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ozgurdurak/Desktop/microservice-library/loan-service/src/main/java/com/turkcell/loanservice/cqrs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AuthorServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.BffServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.BookServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.GatewayServerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.LoanServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.MemberServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.PublisherServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ozgurdurak/Desktop/microservice-library/loan-service/src/main/java/com/turkcell/loanservice/cqrs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -264,7 +269,8 @@
       <workItem from="1763203191096" duration="7731000" />
       <workItem from="1763224487400" duration="2724000" />
       <workItem from="1763227256386" duration="981000" />
-      <workItem from="1763232145650" duration="9120000" />
+      <workItem from="1763232145650" duration="9179000" />
+      <workItem from="1763280779221" duration="2309000" />
     </task>
     <servers />
   </component>
