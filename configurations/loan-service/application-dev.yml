@@ -2,6 +2,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+outbox:
+  scheduler:
+    fixed-delay: 5000
 spring:
   kafka:
     bootstrap-servers: localhost:9094
@@ -11,7 +14,7 @@ spring:
         binder:
           brokers: localhost:9094
       bindings:
-        loanCreated-out-0:
+        loan-Events-out-0:
           destination: loan-topic
           contentType: application/json
           group: loan-service
@@ -26,6 +29,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: loan_service_db_password
+
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect

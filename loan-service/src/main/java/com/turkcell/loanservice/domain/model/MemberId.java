@@ -1,5 +1,7 @@
 package com.turkcell.loanservice.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 import java.util.Objects;
 import java.util.UUID;
 

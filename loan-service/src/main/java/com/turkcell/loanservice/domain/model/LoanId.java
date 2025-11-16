@@ -1,5 +1,6 @@
 package com.turkcell.loanservice.domain.model;
 
+
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
