@@ -1,12 +1,12 @@
-package com.turkcell.publisher_service.relayer;
+package com.turkcell.publisher_service.messaging.relayer;
 
 import java.time.OffsetDateTime;
 import java.util.List;
 
 import com.turkcell.publisher_service.domain.event.PublisherCreatedEvent;
-import com.turkcell.publisher_service.messaging.OutboxMessage;
-import com.turkcell.publisher_service.messaging.OutboxRepository;
-import com.turkcell.publisher_service.messaging.OutboxStatus;
+import com.turkcell.publisher_service.messaging.outbox.OutboxMessage;
+import com.turkcell.publisher_service.messaging.outbox.OutboxRepository;
+import com.turkcell.publisher_service.messaging.outbox.OutboxStatus;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;

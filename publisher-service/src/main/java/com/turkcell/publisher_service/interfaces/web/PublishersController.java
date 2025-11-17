@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turkcell.publisher_service.application.command.CreatePublisherCommand;
 import com.turkcell.publisher_service.application.dto.CreatedPublisherResponse;
 import com.turkcell.publisher_service.cqrs.CommandHandler;
-import com.turkcell.publisher_service.messaging.OutboxRepository;
+import com.turkcell.publisher_service.messaging.outbox.OutboxRepository;
 import jakarta.validation.Valid;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.http.HttpStatus;
