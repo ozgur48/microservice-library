@@ -1,10 +1,8 @@
 package com.turkcell.loanservice.domain.model;
 
-import com.turkcell.loanservice.domain.event.BookReturnedEvent;
-import com.turkcell.loanservice.domain.event.DomainEvent;
-import com.turkcell.loanservice.domain.event.LoanBecameOverdueEvent;
-import com.turkcell.loanservice.domain.event.LoanDueDateExtendedEvent;
+import com.turkcell.loanservice.domain.event.*;
 import com.turkcell.loanservice.domain.exception.DueDateMustBeAfterCurrentDueDateException;
+import com.turkcell.loanservice.domain.exception.DueDateMustBeAfterLoanDateException;
 import com.turkcell.loanservice.domain.exception.LoanAlreadyReturnedException;
 import com.turkcell.loanservice.domain.exception.ReturnDateMustBeAfterLoanDate;
 
@@ -29,7 +27,7 @@ public class Loan implements AggregateRoot{
     private final List<DomainEvent> domainEvents = new ArrayList<>();
 
     public Loan(LoanId loanId, MemberId memberId, BookId bookId, StaffId staffId,
-                DueDate dueDate, LoanDate loanDate, ReturnDate returnDate, LoanStatus loanStatus) {
+                DueDate dueDate, LoanDate loanDate,ReturnDate returnDate, LoanStatus loanStatus) {
         this.loanId = loanId;
         this.memberId = memberId;
         this.bookId = bookId;
@@ -39,14 +37,51 @@ public class Loan implements AggregateRoot{
         this.returnDate = returnDate;
         this.loanStatus = loanStatus;
     }
+    public Loan(LoanId loanId, MemberId memberId, BookId bookId, StaffId staffId,
+                DueDate dueDate, LoanDate loanDate, LoanStatus loanStatus) {
+        this.loanId = loanId;
+        this.memberId = memberId;
+        this.bookId = bookId;
+        this.staffId = staffId;
+        this.dueDate = dueDate;
+        this.loanDate = loanDate;
+        this.returnDate = null;
+        this.loanStatus = LoanStatus.ACTIVE;
+    }
 
     public static Loan create(MemberId memberId, BookId bookId, StaffId staffId,
-                              DueDate dueDate, LoanDate loanDate, ReturnDate returnDate, LoanStatus loanStatus){
-        return new Loan(
-                LoanId.generate(), memberId,
-                bookId, staffId, dueDate, loanDate,
-                returnDate, loanStatus
+                              DueDate dueDate, LoanDate loanDate) {
+
+        // 1. Kendi ID'sini üretir
+        LoanId newLoanId = LoanId.generate();
+
+        // 2. DOMAIN INVARIANT KONTROLÜ
+        // Dışarıdan gelen VO'ların içindeki value() metodunu kullanarak kontrol et.
+        if (dueDate.value().isBefore(loanDate.value())) {
+            throw new DueDateMustBeAfterLoanDateException(
+                    newLoanId.value(),
+                    loanDate.value(),
+                    dueDate.value()
+            );
+        }
+
+        // 3. Aggregate'i oluştur (ReturnDate her zaman null, Status her zaman ACTIVE)
+        Loan loan = new Loan(
+                newLoanId,
+                memberId, // Doğrudan parametre VO'ları kullanılır
+                bookId,
+                staffId,
+                dueDate,
+                loanDate,// ReturnDate ilk başta null'dır
+                LoanStatus.ACTIVE // Initial status
         );
+
+        // 4. LoanCreatedEvent
+        loan.domainEvents.add(
+                new LoanCreatedEvent(loan.loanId, loan.memberId, loan.bookId)
+        );
+
+        return loan;
     }
     public static Loan rehdyrate(LoanId loanId, MemberId memberId, BookId bookId, StaffId staffId,
                                  DueDate dueDate, LoanDate loanDate, ReturnDate returnDate, LoanStatus loanStatus){
@@ -102,7 +137,6 @@ public class Loan implements AggregateRoot{
             // DomainEvents.publish(new LoanBecameOverdueEvent(this.loanId, this.memberId, this.bookId));
             domainEvents.add(new LoanBecameOverdueEvent(this.loanId, this.memberId));
         }
-
     }
 
     public LoanId loanId() {

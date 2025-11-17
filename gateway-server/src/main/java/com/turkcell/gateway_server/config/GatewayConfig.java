@@ -28,6 +28,10 @@ public class GatewayConfig {
                         .path("/api/v1/members/**")
                         .filters(f->f.retry(config -> config.setRetries(3)))
                         .uri("lb://member-service"))
+                .route("loan-service", r-> r
+                        .path("/api/v1/loans/**")
+                        .filters(f->f.retry(config -> config.setRetries(3)))
+                        .uri("lb://loan-service"))
                 .route(
                         "bff-service", r-> r
                                 .path("/api/**")

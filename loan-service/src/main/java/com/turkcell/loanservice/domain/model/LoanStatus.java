@@ -4,5 +4,6 @@ public enum LoanStatus {
     ACTIVE,     // Kitap hâlâ üyede
     RETURNED,   // Kitap iade edildi
     CANCELED,
-    OVERDUE     // Süresi geçti, hâlâ iade edilmedi
+    OVERDUE,
+    // Süresi geçti, hâlâ iade edilmedi
 }

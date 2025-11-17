@@ -34,7 +34,6 @@ public class JpaLoanEntity {
     @Column(nullable = false)
     private LocalDateTime loanDate;
 
-    @Column(nullable = false)
     private LocalDateTime returnDate;
 
     @Enumerated(EnumType.STRING)

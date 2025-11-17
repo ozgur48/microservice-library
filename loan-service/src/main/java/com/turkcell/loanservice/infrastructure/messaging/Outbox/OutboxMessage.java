@@ -24,6 +24,7 @@ public class OutboxMessage {
     @Column(nullable = false, columnDefinition = "uuid")
     private UUID aggregateId;
     private String eventType;
+    @Lob
     private String payloadJson;
 
     @Column(nullable = false)
