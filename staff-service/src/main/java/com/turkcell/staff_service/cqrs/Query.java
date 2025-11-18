@@ -1,4 +1,4 @@
 package com.turkcell.staff_service.cqrs;
 
-public interface Query {
+public interface Query <R>{
 }
