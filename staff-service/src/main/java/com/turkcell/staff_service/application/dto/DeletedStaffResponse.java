@@ -1,4 +1,4 @@
-package com.turkcell.staff_service.application.command;
+package com.turkcell.staff_service.application.dto;
 
 import java.util.UUID;
 

@@ -1,4 +1,7 @@
 package com.turkcell.staff_service.application.dto;
 
-public class CreateStaffResponse {
+import java.util.UUID;
+
+public record CreatedStaffResponse(UUID id,
+                                  String name) {
 }
