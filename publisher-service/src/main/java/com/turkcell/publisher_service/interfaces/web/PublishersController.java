@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turkcell.publisher_service.application.command.CreatePublisherCommand;
 import com.turkcell.publisher_service.application.dto.CreatedPublisherResponse;
 import com.turkcell.publisher_service.cqrs.CommandHandler;
-import com.turkcell.publisher_service.messaging.OutboxRepository;
+import com.turkcell.publisher_service.messaging.outbox.OutboxRepository;
 import jakarta.validation.Valid;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.http.HttpStatus;
@@ -23,11 +23,11 @@ public class PublishersController {
 
 
     public PublishersController(CommandHandler<CreatePublisherCommand,
-                                        CreatedPublisherResponse> createBookCommandHandler,
+                                        CreatedPublisherResponse> createPublisherCommandHandler,
                                 OutboxRepository outboxRepository,
                                 ObjectMapper objectMapper,
                                 StreamBridge streamBridge) {
-        this.createPublisherCommandHandler = createBookCommandHandler;
+        this.createPublisherCommandHandler = createPublisherCommandHandler;
         this.outboxRepository = outboxRepository;
         this.objectMapper = objectMapper;
         this.streamBridge = streamBridge;
@@ -35,7 +35,7 @@ public class PublishersController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public CreatedPublisherResponse createBook(@Valid @RequestBody CreatePublisherCommand command) {
+    public CreatedPublisherResponse createPublisher(@Valid @RequestBody CreatePublisherCommand command) {
         CreatedPublisherResponse publisher = createPublisherCommandHandler.handle(command);
         streamBridge.send("publisherCreated-out", publisher.name());
         return publisher;

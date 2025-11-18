@@ -1,20 +1,19 @@
-package com.turkcell.publisher_service.relayer;
+package com.turkcell.staff_service.messaging.relayer;
 
-import java.time.OffsetDateTime;
-import java.util.List;
-
-import com.turkcell.publisher_service.domain.event.PublisherCreatedEvent;
-import com.turkcell.publisher_service.messaging.OutboxMessage;
-import com.turkcell.publisher_service.messaging.OutboxRepository;
-import com.turkcell.publisher_service.messaging.OutboxStatus;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.turkcell.staff_service.domain.events.StaffCreatedEvent;
+import com.turkcell.staff_service.messaging.outbox.OutboxMessage;
+import com.turkcell.staff_service.messaging.outbox.OutboxRepository;
+import com.turkcell.staff_service.messaging.outbox.OutboxStatus;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.time.OffsetDateTime;
+import java.util.List;
 
 
 @Service
@@ -33,18 +32,18 @@ public class OutboxEventRelayer {
 
     @Scheduled(fixedRate = 5000)
     public void publishPendingEvents() throws JsonProcessingException {
-        System.out.println("publisher, Publish pending events çalıştı..");
+        System.out.println("staff, Publish pending events çalıştı..");
 
         List<OutboxMessage> pendingEvents = outboxRepository.findByStatusOrderByCreatedAtAsc(OutboxStatus.PENDING);
 
         for (OutboxMessage pendingEvent : pendingEvents) {
             // Deserialize
-            PublisherCreatedEvent event = objectMapper.readValue(pendingEvent.getPayloadJson(), PublisherCreatedEvent.class);
+            StaffCreatedEvent event = objectMapper.readValue(pendingEvent.getPayloadJson(), StaffCreatedEvent.class);
 
-            Message<PublisherCreatedEvent> message = MessageBuilder.withPayload(event).build();
+            Message<StaffCreatedEvent> message = MessageBuilder.withPayload(event).build();
 
             try {
-                boolean isSent = streamBridge.send("publisherCreated-out-0", message);
+                boolean isSent = streamBridge.send("staffCreated-out-0", message);
                 if (!isSent) {
                     pendingEvent.setRetryCount(pendingEvent.getRetryCount() + 1);
                     if (pendingEvent.getRetryCount() > 5) {

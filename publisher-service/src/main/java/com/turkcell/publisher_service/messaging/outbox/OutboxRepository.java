@@ -1,4 +1,4 @@
-package com.turkcell.publisher_service.messaging;
+package com.turkcell.publisher_service.messaging.outbox;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
