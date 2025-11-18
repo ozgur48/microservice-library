@@ -23,11 +23,11 @@ public class PublishersController {
 
 
     public PublishersController(CommandHandler<CreatePublisherCommand,
-                                        CreatedPublisherResponse> createBookCommandHandler,
+                                        CreatedPublisherResponse> createPublisherCommandHandler,
                                 OutboxRepository outboxRepository,
                                 ObjectMapper objectMapper,
                                 StreamBridge streamBridge) {
-        this.createPublisherCommandHandler = createBookCommandHandler;
+        this.createPublisherCommandHandler = createPublisherCommandHandler;
         this.outboxRepository = outboxRepository;
         this.objectMapper = objectMapper;
         this.streamBridge = streamBridge;
@@ -35,7 +35,7 @@ public class PublishersController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public CreatedPublisherResponse createBook(@Valid @RequestBody CreatePublisherCommand command) {
+    public CreatedPublisherResponse createPublisher(@Valid @RequestBody CreatePublisherCommand command) {
         CreatedPublisherResponse publisher = createPublisherCommandHandler.handle(command);
         streamBridge.send("publisherCreated-out", publisher.name());
         return publisher;
