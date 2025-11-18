@@ -3,7 +3,6 @@ package com.turkcell.loanservice.domain.event;
 import com.turkcell.loanservice.domain.model.BookId;
 import com.turkcell.loanservice.domain.model.LoanId;
 import com.turkcell.loanservice.domain.model.MemberId;
-import com.turkcell.loanservice.domain.model.StaffId;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
