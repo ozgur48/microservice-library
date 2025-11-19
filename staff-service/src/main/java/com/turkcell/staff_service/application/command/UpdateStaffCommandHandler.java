@@ -6,7 +6,9 @@ import com.turkcell.staff_service.cqrs.CommandHandler;
 import com.turkcell.staff_service.domain.exception.StaffNotFoundException;
 import com.turkcell.staff_service.domain.model.*;
 import com.turkcell.staff_service.domain.repository.StaffRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UpdateStaffCommandHandler implements CommandHandler<UpdateStaffCommand, UpdatedStaffResponse> {
 
     private final StaffRepository staffRepository;

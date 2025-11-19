@@ -7,7 +7,9 @@ import com.turkcell.staff_service.domain.exception.StaffNotFoundException;
 import com.turkcell.staff_service.domain.model.Staff;
 import com.turkcell.staff_service.domain.model.StaffId;
 import com.turkcell.staff_service.domain.repository.StaffRepository;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GetStaffDetailsQueryHandler implements QueryHandler<GetStaffDetailsQuery, StaffDetails> {
 
     private final StaffRepository staffRepository;

@@ -2,7 +2,9 @@ package com.turkcell.staff_service.application.mapper;
 
 import com.turkcell.staff_service.application.dto.StaffDetails;
 import com.turkcell.staff_service.domain.model.Staff;
+import org.springframework.stereotype.Component;
 
+@Component
 public class StaffDetailsMapper {
 
     public StaffDetails toResponse(Staff staff){
