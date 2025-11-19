@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 import java.util.UUID;
 
 @Entity
-@Table(name="books")
+@Table(name="staffs")
 public class JpaStaffEntity {
     @Id
     private UUID id;
