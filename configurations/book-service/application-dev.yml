@@ -26,7 +26,9 @@ spring:
       bindings:
         bookCreated-out-0:
           destination: book-topic
-          group: book-service
+        loanEvents-in-0:
+          destination: loan-Events-topic # Loan Service'in yayınladığı Topic adı ile BİREBİR EŞLEŞMELİ
+          group: book-status-updater-group
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true

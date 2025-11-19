@@ -17,7 +17,6 @@ spring:
         loan-Events-out-0:
           destination: loan-topic
           contentType: application/json
-          group: loan-service
   security:
     oauth2:
       resourceserver:
