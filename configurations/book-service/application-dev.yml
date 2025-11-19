@@ -29,6 +29,8 @@ spring:
         loanEvents-in-0:
           destination: loan-Events-topic # Loan Service'in yayınladığı Topic adı ile BİREBİR EŞLEŞMELİ
           group: book-status-updater-group
+          consumer:
+            auto-offset-reset: earliest
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true

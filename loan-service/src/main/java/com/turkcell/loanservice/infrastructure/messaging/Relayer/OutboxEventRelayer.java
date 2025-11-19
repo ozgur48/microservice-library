@@ -41,15 +41,11 @@ public class OutboxEventRelayer {
         for(OutboxMessage pending : pendingEvents){
             boolean successfullySent = false;
             try{
-                // 1. DİNAMİK DESERIALIZATION
-                // Payload'ı, OutboxMessage'daki eventType alanını kullanarak doğru sınıfa dönüştür
-                Class<?> eventClass = Class.forName(pending.eventType());
-                Object event = objectMapper.readValue(pending.payloadJson(), eventClass);
 
                 // 2. KAFKA MESAJINI OLUŞTUR
                 // Kafka Key ve Idempotency için eventId'yi header olarak eklemek önemlidir.
                 // streamBridge, Spring Cloud Stream'in çıktı binding'ine gönderir.
-                Message<?> message = MessageBuilder.withPayload(event)
+                Message<?> message = MessageBuilder.withPayload(pending.payloadJson())
                         .setHeader("event-id", pending.eventId().toString())
                         .setHeader("aggregate-id", pending.aggregateId().toString())
                         .build();
