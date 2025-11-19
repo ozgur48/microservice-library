@@ -10,7 +10,7 @@ spring:
         jwt:
           issuer-uri: http://localhost:8585/realms/turkcell-library-p1-dev
   datasource:
-    url: jdbc:postgresql://localhost:5440/staff_service
+    url: jdbc:postgresql://localhost:5441/staff_service
     username: postgres
     password: staff_service_db_password
     driver-class-name: org.postgresql.Driver

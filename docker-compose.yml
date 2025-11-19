@@ -56,7 +56,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: staff_service_db_password
     ports:
-      - "5440:5432"
+      - "5441:5432"
     volumes:
       - staffdb_vol:/var/lib/postgres/data
   
