@@ -29,10 +29,13 @@ spring:
         bookCreated-out-0:
           destination: book-topic
         loanEvents-in-0:
-          destination: loan-Events-topic # Loan Service'in yayınladığı Topic adı ile BİREBİR EŞLEŞMELİ
+          destination: loan-events-topic # Loan Service'in yayınladığı Topic adı ile BİREBİR EŞLEŞMELİ
           group: book-status-updater-group
+          contentType: application/json
           consumer:
+            enableDlq: true
             auto-offset-reset: earliest
+            maxAttempts: 3
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true

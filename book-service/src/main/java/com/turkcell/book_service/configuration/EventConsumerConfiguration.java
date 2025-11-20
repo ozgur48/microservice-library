@@ -18,12 +18,7 @@ public class EventConsumerConfiguration {
     @Bean
     public Consumer<LoanCreatedIntegrationEvent> loanEvents(){
         return event -> {
-            try{
-                bookLoanService.processLoanCreation(event);
-            }catch (Exception e){
-                e.printStackTrace();
-                throw new RuntimeException("Consumer not work", e);
-            }
+            bookLoanService.processLoanCreation(event);
         };
     }
 }
