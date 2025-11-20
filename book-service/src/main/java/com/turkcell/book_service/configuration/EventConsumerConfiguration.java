@@ -1,4 +1,4 @@
-package com.turkcell.book_service.application.book.configuration;
+package com.turkcell.book_service.configuration;
 
 import com.turkcell.book_service.application.book.eventHandlers.BookLoanService;
 import com.turkcell.book_service.messaging.events.LoanCreatedIntegrationEvent;
@@ -14,11 +14,16 @@ public class EventConsumerConfiguration {
     public EventConsumerConfiguration(BookLoanService bookLoanService) {
         this.bookLoanService = bookLoanService;
     }
+    // Bean metodu, Spring Cloud Stream için Kafka Consumer fonksiyonudur.
     @Bean
     public Consumer<LoanCreatedIntegrationEvent> loanEvents(){
         return event -> {
-            // Transaction ve iş mantığı, bu service içinde yürütülür.
-            bookLoanService.processLoanCreation(event);
+            try{
+                bookLoanService.processLoanCreation(event);
+            }catch (Exception e){
+                e.printStackTrace();
+                throw new RuntimeException("Consumer not work", e);
+            }
         };
     }
 }

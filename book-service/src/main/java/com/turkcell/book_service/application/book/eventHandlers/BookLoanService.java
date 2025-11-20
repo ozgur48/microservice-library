@@ -6,9 +6,9 @@ import com.turkcell.book_service.domain.model.BookId;
 import com.turkcell.book_service.domain.repository.BookRepository;
 import com.turkcell.book_service.messaging.events.LoanCreatedIntegrationEvent;
 import jakarta.transaction.Transactional;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class BookLoanService {
     private final BookRepository bookRepository;
 
