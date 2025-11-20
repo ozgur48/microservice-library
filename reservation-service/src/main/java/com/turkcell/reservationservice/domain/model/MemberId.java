@@ -1,0 +1,10 @@
+package com.turkcell.reservationservice.domain.model;
+
+import java.util.Objects;
+import java.util.UUID;
+
+public record MemberId(UUID value) {
+    public MemberId{
+        Objects.requireNonNull(value, "MemberId can not be null.");
+    }
+}
