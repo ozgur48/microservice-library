@@ -14,8 +14,8 @@ spring:
         binder:
           brokers: localhost:9094
       bindings:
-        loan-Events-out-0:
-          destination: loan-topic
+        loanEvents-out-0:
+          destination: loan-events-topic
           contentType: application/json
   security:
     oauth2:
