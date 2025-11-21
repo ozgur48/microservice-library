@@ -16,6 +16,7 @@ public class BookLoanService {
         this.bookRepository = bookRepository;
     }
 
+
     @Transactional // book kaydı sırasında hata olursa rollback yapar
     public void processLoanCreation(LoanCreatedIntegrationEvent event){
         BookId bookId = new BookId(event.bookId()); // gelen uuid'yi vo'ye çevirir

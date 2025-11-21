@@ -1,4 +1,4 @@
-package com.turkcell.book_service.configuration;
+package com.turkcell.book_service.messaging.consumer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
