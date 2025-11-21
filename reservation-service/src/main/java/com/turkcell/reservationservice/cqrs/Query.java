@@ -1,4 +1,4 @@
 package com.turkcell.reservationservice.cqrs;
 
-public interface Query {
+public interface Query <Q>{
 }

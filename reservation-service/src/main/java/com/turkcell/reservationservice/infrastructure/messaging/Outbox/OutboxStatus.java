@@ -1,5 +1,7 @@
-package com.turkcell.loanservice.infrastructure.messaging.Outbox;
+package com.turkcell.reservationservice.infrastructure.messaging.Outbox;
 
 public enum OutboxStatus {
-    PENDING, SENT, FAILED
+    PENDING,
+    SENT,
+    FAILED
 }

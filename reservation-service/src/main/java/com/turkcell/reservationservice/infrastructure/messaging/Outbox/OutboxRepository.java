@@ -1,4 +1,4 @@
-package com.turkcell.loanservice.infrastructure.messaging.Outbox;
+package com.turkcell.reservationservice.infrastructure.messaging.Outbox;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

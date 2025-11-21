@@ -49,7 +49,7 @@ public class OutboxEventRelayer {
                         .setHeader("event-id", pending.eventId().toString())
                         .setHeader("aggregate-id", pending.aggregateId().toString())
                         .build();
-                successfullySent = streamBridge.send(pending.aggregateType() + "Events-out-0", message);
+                successfullySent = streamBridge.send(pending.aggregateType().toLowerCase() + "Events-out-0", message);
             }catch (Exception e){
                 log.error("Failed to process or send Outbox message ID: {}", pending.eventId(), e);
                 successfullySent = false;

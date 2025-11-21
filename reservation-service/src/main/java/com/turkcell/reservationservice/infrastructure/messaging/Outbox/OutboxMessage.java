@@ -1,5 +1,4 @@
-package com.turkcell.loanservice.infrastructure.messaging.Outbox;
-
+package com.turkcell.reservationservice.infrastructure.messaging.Outbox;
 import jakarta.persistence.*;
 
 import java.time.OffsetDateTime;
