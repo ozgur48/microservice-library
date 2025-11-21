@@ -6,7 +6,6 @@ import com.turkcell.reservationservice.domain.event.ReservationCreatedEvent;
 import com.turkcell.reservationservice.domain.exception.ReservationCannotBeCancelledException;
 import com.turkcell.reservationservice.domain.exception.ReservationExpireAtCanNotBeBeforeReservedAtException;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

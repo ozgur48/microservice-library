@@ -1,7 +1,9 @@
 package com.turkcell.reservationservice.infrastructure;
 
 import com.turkcell.reservationservice.domain.model.*;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ReservationEntityMapper {
     public JpaReservationEntity toEntity(Reservation reservation){
         return new JpaReservationEntity(

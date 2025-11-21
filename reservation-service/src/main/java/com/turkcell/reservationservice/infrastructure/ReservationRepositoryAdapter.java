@@ -3,12 +3,12 @@ package com.turkcell.reservationservice.infrastructure;
 import com.turkcell.reservationservice.domain.model.Reservation;
 import com.turkcell.reservationservice.domain.model.ReservationId;
 import com.turkcell.reservationservice.domain.port.ReservationRepository;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
-
+@Repository
 public class ReservationRepositoryAdapter implements ReservationRepository {
     private final ReservationEntityMapper reservationEntityMapper;
     private final JpaReservationRepository repository;

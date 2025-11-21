@@ -26,11 +26,11 @@ public record ReservationCreatedEvent(
 
     @Override
     public UUID getEventId() {
-        return null;
+        return eventId;
     }
 
     @Override
     public LocalDateTime getOccuredOn() {
-        return null;
+        return occuredOn;
     }
 }

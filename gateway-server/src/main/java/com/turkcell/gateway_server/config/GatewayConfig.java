@@ -32,6 +32,14 @@ public class GatewayConfig {
                         .path("/api/v1/loans/**")
                         .filters(f->f.retry(config -> config.setRetries(3)))
                         .uri("lb://loan-service"))
+                .route("staff-service", r-> r
+                        .path("/api/v1/staffs/**")
+                        .filters(f->f.retry(config -> config.setRetries(3)))
+                        .uri("lb://staff-service"))
+                .route("reservation-service", r-> r
+                        .path("/api/v1/reservations/**")
+                        .filters(f->f.retry(config -> config.setRetries(3)))
+                        .uri("lb://reservation-service"))
                 .route(
                         "bff-service", r-> r
                                 .path("/api/**")

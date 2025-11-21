@@ -1,26 +1,25 @@
-package com.turkcell.loanservice.infrastructure.messaging.Outbox;
+package com.turkcell.reservationservice.infrastructure.messaging.Outbox;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.turkcell.loanservice.domain.event.DomainEvent;
-import com.turkcell.loanservice.domain.event.LoanCreatedEvent;
-import com.turkcell.loanservice.domain.model.AggregateRoot;
-import com.turkcell.loanservice.infrastructure.messaging.mappers.LoanEventMapper;
+import com.turkcell.reservationservice.domain.event.DomainEvent;
+import com.turkcell.reservationservice.domain.event.ReservationCreatedEvent;
+import com.turkcell.reservationservice.domain.model.AggregateRoot;
+import com.turkcell.reservationservice.infrastructure.messaging.Mappers.ReservationEventMapper;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
+
 @Service
-public class OutboxEventSaverImpl implements OutboxEventSaver {
+public class OutboxEventSaverImpl  implements OutboxEventSaver {
     private final OutboxRepository outboxRepository;
     private final ObjectMapper objectMapper;
-    private final LoanEventMapper loanEventMapper;
+    private final ReservationEventMapper reservationEventMapper;
 
-
-    public OutboxEventSaverImpl(OutboxRepository outboxRepository, ObjectMapper objectMapper, LoanEventMapper loanEventMapper) {
+    public OutboxEventSaverImpl(OutboxRepository outboxRepository, ObjectMapper objectMapper, ReservationEventMapper reservationEventMapper) {
         this.outboxRepository = outboxRepository;
         this.objectMapper = objectMapper;
-        this.loanEventMapper = loanEventMapper;
+        this.reservationEventMapper = reservationEventMapper;
     }
 
     @Override
@@ -29,10 +28,9 @@ public class OutboxEventSaverImpl implements OutboxEventSaver {
         for(DomainEvent event : events){
             Object integrationEvent;
             String eventTypeForOutbox;
-            // gelen olay tipine göre dönüşüm yap
-            if(event instanceof LoanCreatedEvent createdEvent){
-                // sadece loancreatedevent geldiğinde dönüşüm yaplır
-                integrationEvent = loanEventMapper.toIntegrationEvent(createdEvent);
+
+            if(event instanceof ReservationCreatedEvent createdEvent){
+                integrationEvent = reservationEventMapper.toIntegrationEvent(createdEvent);
                 eventTypeForOutbox = createdEvent.getClass().getName();
             }
             // VEYA DİĞER OLAY TİPLERİ İÇİN EKLEYİN:
@@ -42,13 +40,13 @@ public class OutboxEventSaverImpl implements OutboxEventSaver {
                 eventTypeForOutbox = extendedEvent.getClass().getName();
             }
             */
-            else{
+            else {
                 // Olayın Integration Event'e karşılığı yoksa, bu bir altyapı hatasıdır.
                 // Transaction'ı geri al
                 throw new RuntimeException("Domain Event type not mapped for Outbox serialization: " + event.getClass().getName());
             }
             try{
-                // 2.serileştirme
+                // 2. serileştirme
                 String payloadJson = objectMapper.writeValueAsString(integrationEvent);
 
                 OutboxMessage message = new OutboxMessage(
@@ -58,15 +56,16 @@ public class OutboxEventSaverImpl implements OutboxEventSaver {
                         event.getClass().getName(),                     // Örneğin: "com.loanservice.events.BookReturnedEvent"
                         payloadJson
                 );
-                // 4. Outbox Tablosuna Kaydetme (Repository'yi kullanır)
-                // Bu save işlemi, Application katmanındaki ana transaction'a katılır.
+
+                // outbox tablosuna kaydet
                 outboxRepository.save(message);
-            } catch (JsonProcessingException e){
+            }catch(JsonProcessingException e){
                 // Serileştirme hatası kritik bir iş hatasıdır ve Transaction'ı geri almalıdır (rollback).
                 // Bu nedenle Unchecked Exception (Runtime) fırlatılır.
                 throw new RuntimeException("Error serializing Domain Event for Outbox: " + event.getEventId(), e);
             }
         }
+        // 5. aggregat temizle
         // 5. Aggregate'i Temizleme
         // Olaylar artık kalıcı olarak Outbox tablosunda güvende olduğu için bellekteki listeyi temizle.
         aggregate.clearDomainEvents();
