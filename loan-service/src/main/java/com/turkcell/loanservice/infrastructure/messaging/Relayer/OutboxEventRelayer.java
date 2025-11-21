@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turkcell.loanservice.infrastructure.messaging.Outbox.OutboxMessage;
 import com.turkcell.loanservice.infrastructure.messaging.Outbox.OutboxRepository;
 import com.turkcell.loanservice.infrastructure.messaging.Outbox.OutboxStatus;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.stream.function.StreamBridge;

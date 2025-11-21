@@ -59,6 +59,16 @@ services:
       - "5441:5432"
     volumes:
       - staffdb_vol:/var/lib/postgres/data
+  reservationsv_db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: reservation_service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: reservation_service_db_password
+    ports:
+      - "5442:5432"
+    volumes:
+      - reservationdb_vol:/var/lib/postgres/data
   
   kafka:
     image: apache/kafka:3.8.0
@@ -143,6 +153,7 @@ volumes:
   loandb_vol: { }
   memberdb_vol: { }
   staffdb_vol: { }
+  reservationdb_vol: { }
   kafka-data: { }
   kc_pg_data: { }
 

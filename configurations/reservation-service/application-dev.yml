@@ -1,0 +1,37 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+outbox:
+  scheduler:
+    fixed-delay: 5000
+spring:
+  kafka:
+    bootstrap-servers: localhost:9094
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9094
+      bindings:
+        reservationEvents-out-0:
+          destination: reservation-events-topic
+          contentType: application/json
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8585/realms/turkcell-library-p1-dev
+
+  datasource:
+    url: jdbc:postgresql://localhost:5442/reservation_service
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: reservation_service_db_password
+
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
