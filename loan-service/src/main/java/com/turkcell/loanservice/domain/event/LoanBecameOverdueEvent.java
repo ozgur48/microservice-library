@@ -14,11 +14,11 @@ public record LoanBecameOverdueEvent(UUID eventId, LocalDateTime occuredOn, Loan
 
     @Override
     public UUID getEventId() {
-        return null;
+        return eventId;
     }
 
     @Override
     public LocalDateTime getOccuredOn() {
-        return null;
+        return occuredOn;
     }
 }

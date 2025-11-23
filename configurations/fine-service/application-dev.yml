@@ -29,7 +29,6 @@ spring:
     username: postgres
     password: fine_service_db_password
 
-
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:

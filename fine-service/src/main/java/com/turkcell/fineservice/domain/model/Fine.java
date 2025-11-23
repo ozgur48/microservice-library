@@ -8,6 +8,7 @@ import com.turkcell.fineservice.domain.exception.AmountCannotBeNegative;
 import com.turkcell.fineservice.domain.exception.BusinessException;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class Fine implements AggregateRoot{
@@ -39,13 +40,13 @@ public class Fine implements AggregateRoot{
 
     public Fine(){}
 
-    public static Fine create(LoanId loanId, MemberId memberId, Amount amount, StaffId staffId,
-                              Reason reason, FineType fineType ){
+    public static Fine create(LoanId loanId, MemberId memberId,StaffId staffId, Amount amount,
+                              Reason reason, FineType fineType){
         FineId fineId = FineId.generate();
         AppliedAt appliedAt = AppliedAt.now();
 
         // domain invariant kontrolü
-        if(amount.value().compareTo(BigDecimal.ZERO) == 0){
+        if(amount.value().compareTo(BigDecimal.ZERO) <= 0){
             throw new AmountCannotBeNegative(amount.value());
         }
         // fine aggreagate yarat

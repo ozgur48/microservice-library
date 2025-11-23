@@ -40,6 +40,10 @@ public class GatewayConfig {
                         .path("/api/v1/reservations/**")
                         .filters(f->f.retry(config -> config.setRetries(3)))
                         .uri("lb://reservation-service"))
+                .route("fine-service", r-> r
+                        .path("/api/v1/fines/**")
+                        .filters(f->f.retry(config -> config.setRetries(3)))
+                        .uri("lb://fine-service"))
                 .route(
                         "bff-service", r-> r
                                 .path("/api/**")

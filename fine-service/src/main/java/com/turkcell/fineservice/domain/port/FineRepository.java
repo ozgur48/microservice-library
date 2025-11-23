@@ -13,6 +13,4 @@ public interface FineRepository {
     List<Fine> findAll();
     List<Fine> findAllPaged(Integer pageIndex, Integer pageSize);
     void delete(FineId fineId);
-
-
 }
