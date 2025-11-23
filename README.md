@@ -510,8 +510,8 @@ Bu proje Turkcell Geleceği Yazanlar 4.5 - Java eğitimi kapsamında eğitim son
 
 ## Geliştiriciler
 
-https://github.com/ozgur48
-https://github.com/eda-akkaya
-https://github.com/UtkuKaganYavuzdogannn
+https://github.com/ozgur48  
+https://github.com/eda-akkaya  
+https://github.com/UtkuKaganYavuzdogannn  
 
 ---
