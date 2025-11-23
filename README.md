@@ -484,6 +484,103 @@ Her servis **Onion Architecture** prensiplerine göre aşağıdaki yapıyı taki
 
 ---
 
+## 📡 Event'ler ve Mesajlaşma
+
+Proje, **Event-Driven Architecture** prensiplerine göre çalışır. Servisler arası iletişim Kafka üzerinden asenkron event'ler ile sağlanır.
+
+### Domain Event'ler
+
+Domain event'ler, domain katmanında oluşan ve iş mantığını yansıtan olaylardır. Bu event'ler Outbox Pattern kullanılarak Kafka'ya gönderilir.
+
+#### Book Service
+
+- **`BookCreated`** - Yeni bir kitap oluşturulduğunda yayınlanır
+- **`BookStatusChangedEvent`** - Kitap durumu değiştiğinde yayınlanır (ör. AVAILABLE → CHECKED_OUT)
+- **`BookCreateFailed`** - Kitap oluşturma işlemi başarısız olduğunda yayınlanır
+
+#### Loan Service
+
+- **`LoanCreatedEvent`** - Yeni bir ödünç verme işlemi oluşturulduğunda yayınlanır
+- **`BookReturnedEvent`** - Kitap iade edildiğinde yayınlanır
+- **`LoanBecameOverdueEvent`** - Ödünç verme süresi dolduğunda yayınlanır
+- **`LoanDueDateExtendedEvent`** - Ödünç verme süresi uzatıldığında yayınlanır
+
+#### Reservation Service
+
+- **`ReservationCreatedEvent`** - Yeni bir rezervasyon oluşturulduğunda yayınlanır
+- **`ReservationCancelledEvent`** - Rezervasyon iptal edildiğinde yayınlanır
+- **`ReservationExpiredEvent`** - Rezervasyon süresi dolduğunda yayınlanır
+
+#### Fine Service
+
+- **`FineCreatedEvent`** - Yeni bir ceza oluşturulduğunda yayınlanır
+- **`FineCancelledEvent`** - Ceza iptal edildiğinde yayınlanır
+
+#### Staff Service
+
+- **`StaffCreatedEvent`** - Yeni bir personel oluşturulduğunda yayınlanır
+- **`StaffCreatedFailedEvent`** - Personel oluşturma işlemi başarısız olduğunda yayınlanır
+
+#### Publisher Service
+
+- **`PublisherCreatedEvent`** - Yeni bir yayınevi oluşturulduğunda yayınlanır
+- **`PublisherCreatedFailedEvent`** - Yayınevi oluşturma işlemi başarısız olduğunda yayınlanır
+
+### Integration Event'ler
+
+Integration event'ler, servisler arası iletişim için kullanılan ve Kafka üzerinden yayınlanan event'lerdir.
+
+#### Loan Service → Book Service
+
+- **`LoanCreatedIntegrationEvent`**
+  - **Yayınlayan**: Loan Service
+  - **Tüketen**: Book Service
+  - **Amaç**: Ödünç verme işlemi oluşturulduğunda Book Service'e bildirim gönderir
+  - **İçerik**: `loanId`, `memberId`, `bookId`
+  - **Etki**: Book Service, kitabın durumunu günceller ve mevcut kopya sayısını azaltır
+
+#### Reservation Service → Diğer Servisler
+
+- **`ReservationCreatedIntegrationEvent`**
+  - **Yayınlayan**: Reservation Service
+  - **Tüketen**: İlgili servisler
+  - **Amaç**: Rezervasyon oluşturulduğunda diğer servislere bildirim
+  - **İçerik**: `reservationId`, `bookId`, `memberId`, `reservedAt`, `expireAt`
+
+### Event Akışı Örneği
+
+```
+1. Loan Service: LoanCreatedEvent (Domain Event)
+   ↓
+2. Loan Service: LoanCreatedIntegrationEvent (Integration Event)
+   ↓ (Kafka)
+3. Book Service: LoanCreatedEventConsumer
+   ↓
+4. Book Service: Book.markAsOnLoan() (Domain Logic)
+   ↓
+5. Book Service: BookStatusChangedEvent (Domain Event)
+```
+
+### Kafka Topic'leri
+
+Event'ler aşağıdaki Kafka topic'lerine yayınlanır:
+
+- `bookCreated-out-0` - Kitap oluşturma event'leri
+- `loanEvents-out-0` - Ödünç verme event'leri
+- `reservationEvents-out-0` - Rezervasyon event'leri
+- `staffCreated-out-0` - Personel oluşturma event'leri
+- `publisherCreated-out-0` - Yayınevi oluşturma event'leri
+- `memberCreated-out` - Üye oluşturma event'leri
+
+### Event İşleme Mekanizması
+
+1. **Outbox Pattern**: Domain event'ler önce veritabanına (Outbox tablosuna) kaydedilir
+2. **Event Relayer**: Periyodik olarak Outbox tablosunu kontrol eder ve Kafka'ya gönderir
+3. **Event Consumer**: Kafka'dan event'leri alır ve ilgili handler'lara yönlendirir
+4. **Transaction Guarantee**: Veritabanı transaction'ı ile event kaydı atomik olarak gerçekleşir
+
+---
+
 ## Güvenlik
 
 - **OAuth2 Resource Server**: Servisler OAuth2 token'ları ile korunur
