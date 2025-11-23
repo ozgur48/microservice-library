@@ -295,8 +295,9 @@ Servislerin yapılandırmaları `configurations/` dizininde bulunmaktadır. Her 
 #### Önemli Portlar
 
 - **Discovery Server**: 8761
-- **Config Server**: 8888
-- **Gateway Server**: 8080 (varsayılan)
+- **Config Server**: 8787
+- **Gateway Server**: 8888 
+- **BFF Service**: 8686
 - **Kafka**: 9092 (internal), 9094 (external)
 - **Kafka UI**: 8079
 - **Keycloak**: 8585
