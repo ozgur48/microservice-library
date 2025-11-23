@@ -484,7 +484,7 @@ Her servis **Onion Architecture** prensiplerine göre aşağıdaki yapıyı taki
 
 ---
 
-## 📡 Event'ler ve Mesajlaşma
+## Event'ler ve Mesajlaşma
 
 Proje, **Event-Driven Architecture** prensiplerine göre çalışır. Servisler arası iletişim Kafka üzerinden asenkron event'ler ile sağlanır.
 
