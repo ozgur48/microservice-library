@@ -45,7 +45,8 @@ public class OutboxEventSaverImpl implements OutboxEventSaver {
                         aggregate.getClass().getSimpleName(),
                         aggregate.getIdValue(),
                         event.getClass().getName(),
-                        payloadJson);
+                        payloadJson
+                );
                 outboxRepository.save(message);
             } catch (JsonProcessingException e) {
                 // Serileştirme hatası kritik bir iş hatasıdır ve Transaction'ı geri almalıdır
