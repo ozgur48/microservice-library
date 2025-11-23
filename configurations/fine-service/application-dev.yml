@@ -14,7 +14,7 @@ spring:
         binder:
           brokers: localhost:9094
       bindings:
-        FineEvents-out-0:
+        fineEvents-out-0:
           destination: fine-events-topic
           contentType: application/json
   security:
